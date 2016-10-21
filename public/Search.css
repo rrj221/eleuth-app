@@ -1,0 +1,37 @@
+.col-lg-6 {
+	margin-top: 300px;
+	margin-left: 500px;
+}
+
+.btn-group {
+	margin-left: 1625px;
+
+}
+
+.dropdown {
+	position: relative;
+}
+
+p{
+	text-align: center;
+}
+
+.container{
+	margin-top: 100px;
+}
+
+.tab-content{
+
+}
+
+body {
+	font-family: 'Philosopher', sans-serif;
+}
+
+.flight {
+	margin-bottom: 10px;
+}
+
+/*body {
+	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
+}*/
