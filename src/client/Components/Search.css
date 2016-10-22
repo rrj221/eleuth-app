@@ -9,11 +9,14 @@
 .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
-    background: #EFE8D8;
+    /*background: #EFE8D8;*/
     margin-right: auto;
     margin-left: auto;
 }
 
+small {
+  font-size: 10px;
+}
 .col-lg-6 {
   margin-top: 300px;
   margin-left: 500px;

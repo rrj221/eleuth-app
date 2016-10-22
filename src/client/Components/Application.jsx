@@ -1,6 +1,7 @@
 
 import React, { Component, cloneElement } from 'react';
 import NewTodoItem from './NewTodoItem';
+import { Router } from 'react-router';
 import "./Application.css";
 
 class Application extends Component {
@@ -14,7 +15,8 @@ class Application extends Component {
 		// set initial state
 		this.state = {
 			items: [],
-			flights: []
+			flights: [],
+			twitter: []
 		};
 	}
 	componentWillMount() {
@@ -26,6 +28,12 @@ class Application extends Component {
 				});
 			})
 	}
+
+	  static get contextTypes() {
+	    return {
+	      router: React.PropTypes.object.isRequired,
+	    };
+	  }
 
 	// creating a method which is responsible for updating our state with a new
 	// item just like we did with `toggleCompleted`: we have to setup a way for
@@ -81,20 +89,26 @@ class Application extends Component {
 	searchFlights(searchObj) {
 		console.log('begin search now');
 		console.log(searchObj);
-		// fetch('/api/skySearch', {
-		// 	method: 'GET' 	
-		// }).then(response => response.json())
-		// .then(json => {
-		// 	console.log(json);
-		// })
+
 		fetch('/api/skySearch', {
 			method: 'POST',
 			body: JSON.stringify(searchObj),
 			headers: { 'content-type': 'application/json' }
 		}).then((response) => response.json())
-			.then((json) => {
-				console.log(json);
-			});
+				.then((json) => {
+					console.log(json)
+					this.setState({
+						flights: json.flights,
+						twitter: json.twitter
+					});
+				});
+	}
+
+	componentDidUpdate(prevProps, prevStates) {
+		if (prevStates.flights !== this.state.flights) {
+			console.log('whats up');
+			this.context.router.push('/sky');
+		}
 	}
 
 	render() {
@@ -113,7 +127,7 @@ class Application extends Component {
 
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 			
-			<link rel="stylesheet" type="text/css" href="./Application.css"/>
+			<link rel="stylesheet" type="text/css" href="/public/Application.css"/>
 
 			<link rel="icon" type="image/png" src="styling/jumpingFrog.png" sizes="32x32" />
 
@@ -125,7 +139,7 @@ class Application extends Component {
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
-	      		<a className="navbar-brand" href="#" >Eleuth</a>
+	      		<a className="navbar-brand" href="#">Eleuth {"\n"}<small>Leap into the World</small></a>
 	    	</div>
 	    <div className="btn-group">
 	    	<div className="dropdown">
@@ -139,11 +153,11 @@ class Application extends Component {
 			</div>
 	   </div>
   	</nav>			    
-			  
 				{
 					cloneElement(this.props.children, {
 					  items: this.state.items,
 					  flights: this.state.flights,
+					  twitter: this.state.twitter,
 					  toggleCompleted: this.toggleCompleted.bind(this),
 					  searchFlights: this.searchFlights.bind(this)
 				  })
@@ -157,52 +171,4 @@ class Application extends Component {
 }
 
 export default Application;
-
-
-
-
-
-
-
-// const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-// module.exports = {
-  
-//   // This code will be compiled 
-//   entry: "./src/client/index.jsx",
-
-//   // Then output into this file
-//   output: {
-//     filename: "public/bundle.js"
-//   },
-
-
-//   // This will be what we do
-//   module: {
-//     loaders: [
-//       { 
-//         test: /\.css$/, 
-//         loader: ExtractTextPlugin.extract("style-loader", "css-loader")      
-//       },
-//       {
-//         test: /\.jsx?$/,
-//         exclude: /(node_modules|bower_components)/,
-//         loader: 'babel',
-//         query: {
-//           // These are the specific transformations we'll be using. 
-//           presets: ['react', 'es2015']
-//         }
-//       }
-//     ]
-//   },
-
-//     plugins: [
-//     new ExtractTextPlugin("webpackStyle.css")
-//   ],
-
-//   resolve: {
-//     extensions: ['', '.jsx', '.js']
-//   }
-
-// }
 
