@@ -36,7 +36,6 @@ export default class SearchPage extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
       <div id='SearchPage'>
 				<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
@@ -51,8 +50,6 @@ export default class SearchPage extends Component {
 				<link rel="stylesheet" type="text/css" href="Search.css"/>
 
 				<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
-      <div id="SearchPage">
-      		searchpage
 		  	<div className="container">
 			  <ul className="nav nav-tabs">
 			    <li className="active"><a data-toggle="tab" href="#home">Flights</a></li>
