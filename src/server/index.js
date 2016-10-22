@@ -6,6 +6,7 @@ const path = require('path');
 const morgan = require('morgan');
 const helpers = require('../client/Components/utils/helpers.js');
 
+
 // implementing the css package styled - components 
 const styled = require('styled-components');
 
@@ -31,6 +32,7 @@ connection.once('open', () => {
 const TodoItem = require('./models/TodoItem');
 
 app.use(express.static('public'));
+app.use(express.static('dist'));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {

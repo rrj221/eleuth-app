@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, hashHistory } from 'react-router';
 
+
 // NOTE: this is where we "import" our routes from our routes file
 import routes from './routes';
 

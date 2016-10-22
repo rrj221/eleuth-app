@@ -16,7 +16,7 @@ class Application extends Component {
 		this.state = {
 			items: [],
 			flights: [],
-			awitter: []
+			twitter: []
 		};
 	}
 	componentWillMount() {
@@ -116,7 +116,6 @@ class Application extends Component {
 
 		<div className='Application'>
 			      <div id='universalPage'>
-		<head>
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
 			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
@@ -126,19 +125,17 @@ class Application extends Component {
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
 
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-			
-			<link rel="stylesheet" type="text/css" href="/public/Application.css"/>
 
 			<link rel="icon" type="image/png" src="styling/jumpingFrog.png" sizes="32x32" />
 
 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
 			<title>Flights Search</title>
-		</head>
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
-	      		<a className="navbar-brand" href="#">Eleuth {"\n"}<small>Leap into the World</small></a>
+	      		<div><a className="navbar-brand" href="#">Eleuth </a></div>
+	      		<small>Leap into the World</small>
 	    	</div>
 	    <div className="btn-group">
 	    	<div className="dropdown">
