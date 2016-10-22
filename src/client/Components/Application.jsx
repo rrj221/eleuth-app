@@ -16,7 +16,7 @@ class Application extends Component {
 		this.state = {
 			items: [],
 			flights: [],
-			awitter: []
+			twitter: []
 		};
 	}
 	componentWillMount() {
