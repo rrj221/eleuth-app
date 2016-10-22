@@ -45,6 +45,7 @@ export default class FlightPage extends Component {
     const tweetsOld = this.state.twitter;
     const tweets = this.props.twitter;
   	console.log(flights);
+    console.log(tweets);
     return (
       <div id='MasterPage'>
 
