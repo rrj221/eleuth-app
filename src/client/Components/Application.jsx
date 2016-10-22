@@ -1,6 +1,6 @@
 
 import React, { Component, cloneElement } from 'react';
-import NewTodoItem from './NewTodoItem';
+import NewTodoItem from './ToDoStuff/NewTodoItem';
 import { Router } from 'react-router';
 import "./Application.css";
 

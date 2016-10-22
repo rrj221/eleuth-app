@@ -45,11 +45,10 @@ export default class SearchPage extends Component {
 
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
 
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-				
-				<link rel="stylesheet" type="text/css" href="Search.css"/>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
 
-				<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
+
+				<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/></script>
 		  	<div className="container">
 			  <ul className="nav nav-tabs">
 			    <li className="active"><a data-toggle="tab" href="#home">Flights</a></li>

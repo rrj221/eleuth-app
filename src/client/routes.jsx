@@ -16,7 +16,7 @@ import CompletedPage from './Pages/CompletedPage';
 
 import ResultsPage from './Components/ResultsPage';
 
-import SearchPage from './Components/SearchPage';
+import SearchPage from './Components/Search/SearchPage';
 
 export default (
 	/* This means the Application component 
