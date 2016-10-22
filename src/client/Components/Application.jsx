@@ -113,7 +113,7 @@ class Application extends Component {
 
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 			
-			<link rel="stylesheet" type="text/css" href="./Application.css"/>
+			<link rel="stylesheet" type="text/css" href="/public/Application.css"/>
 
 			<link rel="icon" type="image/png" src="styling/jumpingFrog.png" sizes="32x32" />
 
@@ -125,7 +125,7 @@ class Application extends Component {
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
-	      		<a className="navbar-brand" href="#" >Eleuth</a>
+	      		<a className="navbar-brand" href="#">Eleuth {"\n"}<small>Leap into the World</small></a>
 	    	</div>
 	    <div className="btn-group">
 	    	<div className="dropdown">
