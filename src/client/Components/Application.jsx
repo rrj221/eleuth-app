@@ -1,6 +1,7 @@
 
 import React, { Component, cloneElement } from 'react';
 import NewTodoItem from './NewTodoItem';
+import { Router } from 'react-router';
 
 class Application extends Component {
 
@@ -13,7 +14,8 @@ class Application extends Component {
 		// set initial state
 		this.state = {
 			items: [],
-			flights: []
+			flights: [],
+			twitter: []
 		};
 	}
 
@@ -26,6 +28,12 @@ class Application extends Component {
 				});
 			})
 	}
+
+	  static get contextTypes() {
+	    return {
+	      router: React.PropTypes.object.isRequired,
+	    };
+	  }
 
 	// creating a method which is responsible for updating our state with a new
 	// item just like we did with `toggleCompleted`: we have to setup a way for
@@ -81,29 +89,39 @@ class Application extends Component {
 	searchFlights(searchObj) {
 		console.log('begin search now');
 		console.log(searchObj);
-		// fetch('/api/skySearch', {
-		// 	method: 'GET' 	
-		// }).then(response => response.json())
-		// .then(json => {
-		// 	console.log(json);
-		// })
+
 		fetch('/api/skySearch', {
 			method: 'POST',
 			body: JSON.stringify(searchObj),
 			headers: { 'content-type': 'application/json' }
 		}).then((response) => response.json())
-			.then((json) => {
-				console.log(json);
-			});
+				.then((json) => {
+					console.log(json)
+					this.setState({
+						flights: json.flights,
+						twitter: json.twitter
+					});
+				});
+	}
+
+	componentDidUpdate(prevProps, prevStates) {
+		if (prevStates.flights !== this.state.flights) {
+			console.log('whats up');
+			this.context.router.push('/sky');
+		}
 	}
 
 	render() {
 		return (
 			<div className="Application">
+
+
+
 				{
 					cloneElement(this.props.children, {
 					  items: this.state.items,
 					  flights: this.state.flights,
+					  twitter: this.state.twitter,
 					  toggleCompleted: this.toggleCompleted.bind(this),
 					  searchFlights: this.searchFlights.bind(this)
 				  })
