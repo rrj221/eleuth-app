@@ -169,6 +169,8 @@ const helpers = {
 	}, 
 
 	twitterSearch(country, display, callback) {
+		console.log('country');
+		console.log(country);
 		var client = new Twitter({
 	  		consumer_key: 'mfPgl2zeDBVNUYFWbwpoFv4T9',
 	  		consumer_secret: 'mdpfKV11FAnZPhwJz2z0QQXqThTGd7zgBUZzQ4skZRgDAEjnto',
@@ -193,18 +195,55 @@ const helpers = {
 				if (trendsArray.length > 10) {
 					console.log(trendsArray.slice(0, 10));
 					trendsArray = trendsArray.slice(0, 10);
-					callback({
+					// callback({
+					// 	twitter: trendsArray,
+					// 	flights: display
+					// });
+					var newDisplay = {
 						twitter: trendsArray,
 						flights: display
-					});
+					}
+					helpers.newsSearch(country, newDisplay, callback);
 				} else {
 					console.log(trendsArray);
-					callback({
+					var newDisplay = {
 						twitter: trendsArray,
 						flights: display
-					});
+					}
+					helpers.newsSearch(country, newDisplay, callback);
+					// callback({
+					// 	twitter: trendsArray,
+					// 	flights: display
+					// });
 				} 
 			}
+		});
+	},
+
+	newsSearch(country, display, callback) {
+		console.log(country);
+		console.log(display);
+		//search for news in US
+		var country = 'US'
+		var URL = "https://webhose.io/search?token=62bbc47b-2985-4449-ae34-54b112e8108c&format=json&q=thread.country%3A"+country+"%20performance_score%3A%3E5%20(site_type%3Anews)";
+		unirest.get(URL)
+		.header("Accept", "text/plain")
+		.end(function (result) {
+			var data = result.body;
+			var toClient = []
+			for (var i = 0; i < 10; i++) {
+				toClient.push({
+					title: data.posts[i].title,
+					url: data.posts[i].url,
+					publishedDate: data.posts[i].published,
+					text: data.posts[i].text
+				});
+			}
+			console.log('ayayayaya')
+			display['news'] = toClient;
+			console.log(display);
+			callback(display);
+		    // res.json({ data: toClient });
 		});
 	}
 }
