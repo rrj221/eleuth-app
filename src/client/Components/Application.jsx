@@ -16,7 +16,8 @@ class Application extends Component {
 		this.state = {
 			items: [],
 			flights: [],
-			twitter: []
+			twitter: [],
+			news: []
 		};
 	}
 	componentWillMount() {
@@ -99,7 +100,8 @@ class Application extends Component {
 					console.log(json)
 					this.setState({
 						flights: json.flights,
-						twitter: json.twitter
+						twitter: json.twitter,
+						news: json.news
 					});
 				});
 	}
@@ -154,6 +156,7 @@ class Application extends Component {
 					  items: this.state.items,
 					  flights: this.state.flights,
 					  twitter: this.state.twitter,
+					  news: this.state.news,
 					  toggleCompleted: this.toggleCompleted.bind(this),
 					  searchFlights: this.searchFlights.bind(this)
 				  })
