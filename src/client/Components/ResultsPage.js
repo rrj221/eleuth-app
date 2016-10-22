@@ -22,7 +22,7 @@ const ul = styled.section`
   background: #9783c8;
 `;
 
-export default class FlightPage extends Component {
+export default class ResultsPage extends Component {
 	constructor(props, context) {
 
 		super(props, context);
