@@ -38,13 +38,12 @@ export default class FlightPage extends Component {
   	console.log(flights);
     console.log(flightsProps);
     return (
-      <div id='MasterPage'>
-        Flights
+       <div id='MasterPage'>
 
                     		{
                     			flights.map((flight) => 
                             <Wrapper>
-                            This is a single flight
+                            This is a single flight..
                     				<Flight
                             
                       					outboundInfo={flight.outboundInfo}
