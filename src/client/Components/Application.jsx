@@ -16,7 +16,7 @@ class Application extends Component {
 		this.state = {
 			items: [],
 			flights: [],
-			twitter: []
+			awitter: []
 		};
 	}
 	componentWillMount() {
@@ -113,10 +113,10 @@ class Application extends Component {
 
 	render() {
 		return (
-		<div className="Application">
-			      <div id='universalPage'>
-	      <head>
 
+		<div className='Application'>
+			      <div id='universalPage'>
+		<head>
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
 			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
@@ -134,8 +134,7 @@ class Application extends Component {
 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
 			<title>Flights Search</title>
-		  </head>
-      		Master page in Application.jsx
+		</head>
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
