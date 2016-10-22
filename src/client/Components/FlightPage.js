@@ -45,11 +45,12 @@ export default class FlightPage extends Component {
                             <Wrapper>
                             This is a single flight..
                     				<Flight
-                            
-                      					outboundInfo={flight.outboundInfo}
-                      					inboundInfo={flight.inboundInfo}
-                      					priceInfo={flight.priceInfo}
-                              
+       
+               
+                                outboundInfo={flight.outboundInfo} 
+                      				  inboundInfo={flight.inboundInfo}
+                      		      priceInfo={flight.priceInfo}
+         
                     				/>
                             </Wrapper>
                     			)

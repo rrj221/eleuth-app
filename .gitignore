@@ -1,2 +1,7 @@
 node_modules
 public/bundle.js
+bundle.js
+bundle.js.map
+webpackStyle.css
+webpackStyle.css.map
+webpackStyle.css

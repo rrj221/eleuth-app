@@ -17,7 +17,6 @@ class Application extends Component {
 			flights: []
 		};
 	}
-
 	componentWillMount() {
 		fetch('/api/items')
 			.then((response) => response.json())
@@ -116,6 +115,7 @@ class Application extends Component {
 			
 			<link rel="stylesheet" type="text/css" href="./Application.css"/>
 
+			<link rel="icon" type="image/png" src="styling/jumpingFrog.png" sizes="32x32" />
 
 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
@@ -125,7 +125,7 @@ class Application extends Component {
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
-	      		<a className="navbar-brand" href="#">Eleuth</a>
+	      		<a className="navbar-brand" href="#" >Eleuth</a>
 	    	</div>
 	    <div className="btn-group">
 	    	<div className="dropdown">
@@ -157,3 +157,52 @@ class Application extends Component {
 }
 
 export default Application;
+
+
+
+
+
+
+
+// const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+// module.exports = {
+  
+//   // This code will be compiled 
+//   entry: "./src/client/index.jsx",
+
+//   // Then output into this file
+//   output: {
+//     filename: "public/bundle.js"
+//   },
+
+
+//   // This will be what we do
+//   module: {
+//     loaders: [
+//       { 
+//         test: /\.css$/, 
+//         loader: ExtractTextPlugin.extract("style-loader", "css-loader")      
+//       },
+//       {
+//         test: /\.jsx?$/,
+//         exclude: /(node_modules|bower_components)/,
+//         loader: 'babel',
+//         query: {
+//           // These are the specific transformations we'll be using. 
+//           presets: ['react', 'es2015']
+//         }
+//       }
+//     ]
+//   },
+
+//     plugins: [
+//     new ExtractTextPlugin("webpackStyle.css")
+//   ],
+
+//   resolve: {
+//     extensions: ['', '.jsx', '.js']
+//   }
+
+// }
+
