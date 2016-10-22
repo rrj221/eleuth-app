@@ -9,14 +9,11 @@
 .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
-    /*background: #EFE8D8;*/
+    background: #EFE8D8;
     margin-right: auto;
     margin-left: auto;
 }
 
-small {
-  font-size: 10px;
-}
 .col-lg-6 {
   margin-top: 300px;
   margin-left: 500px;
@@ -40,19 +37,6 @@ p {
   margin-top: 50px;
 }
 
-.tab-content{
-
-}
-
-body {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 18px;
-  background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");
-  background-repeat: no-repeat; 
-  background-size: 100%;
-
-}
-
 .flights {
   margin-bottom: 10px;
 }
@@ -61,15 +45,6 @@ body {
   font-weight: bolder;
   font-size: 30px;
 
-}
-
-#home, #menu1, #menu2 {
-  background-color: black;
-  border-radius: 5px;
-  /*margin-top: -20px;*/
-  opacity: 0.75;
-  color: white;
-  padding: 10px 10px 0px 10px;
 }
 
 .nav-tabs{

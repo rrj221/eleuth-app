@@ -11,8 +11,20 @@
 
 }
 
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    /*background: #EFE8D8;*/
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .dropdown {
 	position: relative;
+}
+
+small{
+	font-size: 10px
 }
 
 p {
@@ -69,7 +81,8 @@ a {
 }
 
 .navbar-default .navbar-brand {
-    color: purple;
+    color: #9093D9;
+    background-color: #EFE8D8;
     }
 /*body {
 	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")

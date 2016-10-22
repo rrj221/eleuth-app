@@ -82,8 +82,6 @@ export default class FlightPage extends Component {
             )
           }
         </div>
-
-      </div>
     )
   }
 }
