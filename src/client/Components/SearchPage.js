@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import "./Search.css";
+
 export default class SearchPage extends Component {
 
 	constructor(props, context) {
@@ -50,13 +52,13 @@ export default class SearchPage extends Component {
 					  <div className="form-group">
 					  	<div className="row">
 					  		<div className="col-md-3">
-					  			<input type="radio"/> One Way
+					  			<input type="radio" name="oneAnswer"/> One Way
 					  		</div>
 					  		<div className="col-md-3">
-					  			<input type="radio"/> Roundtrip
+					  			<input type="radio" name="oneAnswer"/> Roundtrip
 					  		</div>
 					  		<div className="col-md-3">
-					  			<input type="radio"/> Multi City
+					  			<input type="radio" name="oneAnswer"/> Multi City
 					  		</div>
 					  	</div>
 					  </div>
