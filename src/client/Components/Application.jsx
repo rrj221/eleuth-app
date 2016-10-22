@@ -1,6 +1,7 @@
 
 import React, { Component, cloneElement } from 'react';
 import NewTodoItem from './NewTodoItem';
+import "./Application.css";
 
 class Application extends Component {
 
@@ -113,23 +114,24 @@ class Application extends Component {
 
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 			
-			<link rel="stylesheet" type="text/css" href="Search.css"/>
+			<link rel="stylesheet" type="text/css" href="./Application.css"/>
+
 
 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
 			<title>Flights Search</title>
 		  </head>
       		Master page in Application.jsx
-			<nav class="navbar navbar-default">
-		<div class="container-fluid">
-	    	<div class="navbar-header">
-	      		<a class="navbar-brand" href="#">Eleuth</a>
+			<nav className="navbar navbar-default">
+		<div className="container-fluid">
+	    	<div className="navbar-header">
+	      		<a className="navbar-brand" href="#">Eleuth</a>
 	    	</div>
-	    <div class="btn-group">
-	    	<div class="dropdown">
-				<button class="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile <span class="caret"></span>
+	    <div className="btn-group">
+	    	<div className="dropdown">
+				<button className="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile <span class="caret"></span>
 				</button>
-				  <ul class="dropdown-menu">
+				  <ul className="dropdown-menu">
 				    <li><a href="#">Login</a></li>
 				    <li><a href="#">Sign Up</a></li>
 				  </ul>

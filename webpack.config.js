@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
   
   // This code will be compiled 
@@ -12,6 +14,10 @@ module.exports = {
   // This will be what we do
   module: {
     loaders: [
+      { 
+        test: /\.css$/, 
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader")      
+      },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
@@ -23,6 +29,10 @@ module.exports = {
       }
     ]
   },
+
+    plugins: [
+    new ExtractTextPlugin("webpackStyle.css")
+  ],
 
   resolve: {
     extensions: ['', '.jsx', '.js']

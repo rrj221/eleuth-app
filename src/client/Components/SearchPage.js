@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import "./Search.css";
+
 export default class SearchPage extends Component {
 
 	constructor(props, context) {
