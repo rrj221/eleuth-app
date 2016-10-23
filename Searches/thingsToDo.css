@@ -1,4 +1,6 @@
-
+small{
+  font-size: 12px
+}
 
 .col-lg-6 {
 	margin-top: 300px;
@@ -30,17 +32,57 @@ p {
 body {
 	font-family: 'Philosopher', sans-serif;
 	font-size: 18px;
+	background-image: url("http://chirkup.me/images/uploaded/00/01/15/11537_original.jpg");
+	background-repeat: no-repeat;	
+	background-size: 100%;
+
 }
 
 .flights {
-	margin-bottom: 100px;
+	margin-bottom: 10px;
 }
 
 .navbar-brand{
 	font-weight: bolder;
 	font-size: 30px;
+
 }
 
+#home, #menu1, #menu2 {
+	background-color: black;
+	border-radius: 5px;
+	/*margin-top: -20px;*/
+	opacity: 0.75;
+	color: white;
+	padding: 10px 10px 0px 10px;
+}
+
+.nav-tabs{
+	color: white;
+}
+
+.btn-default {
+	margin-bottom: 10px;
+}
+
+a {
+	color: white;
+	font-weight: bold;
+}
+
+.navbar-default .navbar-brand {
+        color: #9093D9;
+/*#5C60B2;*/
+    background-color: #EFE8D8;
+    }
+
+ .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    background: #EFE8D8;
+    margin-right: auto;
+    margin-left: auto;
+}
 /*body {
 	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
 }*/

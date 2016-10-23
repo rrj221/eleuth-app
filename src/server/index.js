@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 const morgan = require('morgan');
+const helpers = require('../client/Components/utils/helpers.js');
+
 
 // implementing the css package styled - components 
 const styled = require('styled-components');
@@ -30,6 +32,7 @@ connection.once('open', () => {
 const TodoItem = require('./models/TodoItem');
 
 app.use(express.static('public'));
+app.use(express.static('dist'));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
@@ -40,15 +43,14 @@ app.get('/', (req, res) => {
 app.post('/api/skySearch', (req, res) => {
 	console.log('i would like to post');
 	console.log(req.body);
-	res.json(req.body);
+	helpers.sampleFunction();
+	helpers.skyScannerFlightSearch(req.body, function (stuff) {
+		res.json(stuff);
+	});
+		// res.json({hello: 'hello'});
+		// res.json({stuffs: flights});
+	// res.json({hello: 'hello'});
 });
-
-app.get('/api/skySearch', (req, res) => {
-	console.log('skySearch from api');
-	console.log(req);
-	res.json({hello: 'this is the sky search'});
-});
-
 
 
 // get all todo items

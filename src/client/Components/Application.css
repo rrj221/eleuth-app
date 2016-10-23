@@ -1,0 +1,71 @@
+.navbar-header {
+  text-align: center;
+}
+
+.navbar {
+  color: #BFB5D7;
+}
+
+small {
+  font-size: 10px;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    background: #EFE8D8;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.col-lg-6 {
+  margin-top: 300px;
+  margin-left: 500px;
+}
+
+.btn-group {
+  margin-top: 10px;
+  margin-left: 1290px;
+
+}
+
+.dropdown {
+  position: relative;
+}
+
+p {
+  text-align: center;
+}
+
+.container{
+  margin-top: 50px;
+}
+
+.flights {
+  margin-bottom: 10px;
+}
+
+.navbar-brand{
+  font-weight: bolder;
+  font-size: 30px;
+
+}
+
+.nav-tabs{
+  color: white;
+}
+
+.btn-default {
+  margin-bottom: 10px;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-brand {
+    color: #9093D9;
+    background-color: #EFE8D8;
+    src: ;
+    }

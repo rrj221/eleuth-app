@@ -14,9 +14,9 @@ import ActivePage from './Pages/ActivePage';
 // lists only COMPLETED items
 import CompletedPage from './Pages/CompletedPage';
 
-import FlightPage from './Components/FlightPage';
+import ResultsPage from './Components/ResultsPage';
 
-import SearchPage from './Components/SearchPage';
+import SearchPage from './Components/Search/SearchPage';
 
 export default (
 	/* This means the Application component 
@@ -30,7 +30,7 @@ export default (
 		{/* ... */}
 		<Route path="/active" component={ActivePage} />
 
-		<Route path="/sky" component={FlightPage}/>
+		<Route path="/sky" component={ResultsPage}/>
 
 		<Route path="/search" component={SearchPage}/>
 

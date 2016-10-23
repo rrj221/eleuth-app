@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Outbound from './Outbound';
 import Inbound from './Inbound';
 import Prices from './Prices';
+import price from './Price';
 
 
  import styled from 'styled-components';

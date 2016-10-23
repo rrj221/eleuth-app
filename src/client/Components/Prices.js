@@ -17,7 +17,7 @@ export default class Prices extends Component {
     return (
     <Wrapper>
     Prices
-      <div>
+      <div className="col-md-12">
 		<ul className='list-group-item'>
 		  {
 			prices.map((agent) =>
@@ -30,9 +30,8 @@ export default class Prices extends Component {
 			)
 		  }
 		</ul>
-
       </div>
-    </Wrapper>
+       </Wrapper>
     )
   }
 }

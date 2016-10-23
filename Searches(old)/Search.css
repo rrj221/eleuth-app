@@ -1,10 +1,13 @@
+
+
 .col-lg-6 {
 	margin-top: 300px;
 	margin-left: 500px;
 }
 
 .btn-group {
-	margin-left: 1625px;
+	margin-top: 10px;
+	margin-left: 1290px;
 
 }
 
@@ -12,12 +15,12 @@
 	position: relative;
 }
 
-p{
+p {
 	text-align: center;
 }
 
 .container{
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .tab-content{
@@ -26,10 +29,16 @@ p{
 
 body {
 	font-family: 'Philosopher', sans-serif;
+	font-size: 18px;
 }
 
-.flight {
-	margin-bottom: 10px;
+.flights {
+	margin-bottom: 100px;
+}
+
+.navbar-brand{
+	font-weight: bolder;
+	font-size: 30px;
 }
 
 /*body {
