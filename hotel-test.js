@@ -3,7 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var PORT = process.env.PORT || 80;
-var request = require('request');
+var unirest = require('unirest');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -28,18 +28,55 @@ rooms =
 '1',
 entityID,
 firstQueryUrl = 'http://partners.api.skyscanner.net/apiservices/hotels/autosuggest/v2/US/USD/en-us/' + destination + '?apikey=' + apikey,
-secQueryUrl; 
+secQueryUrl,
+hedOpt = {Accept: 'application/json'},
+hotelIDs = [],
+pollRep,
+sessApi; 
 
 app.get('/hotel', function(req, res) {
-	
-	request({url: firstQueryUrl, headers: {Accept: 'application/json'}}, function(error, response, data){
-		entityID = JSON.parse(data).results[0].individual_id;
-		console.log(entityID);
+	unirest.get(firstQueryUrl).headers(hedOpt).end(function(auto){
+		entityID = auto.body.results[0].individual_id;
 		secQueryUrl = 'http://partners.api.skyscanner.net/apiservices/hotels/liveprices/v2/US/USD/en-us/' + entityID + '/' + checkin + '/' + checkout + '/' + guests + '/' + rooms + '/?apiKey=' + apikey;
-		request({url: secQueryUrl, headers: {Accept: 'application/json'}}, function(error, response, lodging){
-			res.json(JSON.parse(lodging)
-				//.hotels
-			);
+		unirest.get(secQueryUrl)
+		.headers(hedOpt)
+		.end(function(session){
+			unirest.get('http://partners.api.skyscanner.net' + session.headers.location)
+			.headers(hedOpt)
+			.end(function(poll){
+				// console.log(poll.body.status);
+				if (poll.body.status === 'PENDING'){
+					do {
+					console.log(poll.headers.location);
+					unirest.get('http://partners.api.skyscanner.net' + poll.headers.location).headers(hedOpt).end(function(pRep){
+						console.log('poop');
+						console.log(pRep.body.status);
+						if (pRep.body.status === 'COMPLETE'){
+							pRep.body.hotels.forEach(function(hotel){
+								hotelIDs.push(hotel.hotel_id);
+							});
+						}
+						console.log(pRep);
+						pollRep = pRep;
+						console.log(pollRep);
+						})
+					} while (pollRep.body.status === 'PENDING');
+					sessApi = pollRep.headers.location.split('/')[5];
+				}
+				else if (poll.body.status === 'COMPLETE'){
+					poll.body.hotels.forEach(function(hotel){
+						hotelIDs.push(hotel.hotel_id);
+					});
+					sessApi = poll.headers.location.split('/')[5];
+				}
+				hotelIDs = hotelIDs.join(',');
+				console.log(hotelIDs);
+				unirest.get('http://partners.api.skyscanner.net/apiservices/hotels/livedetails/v2/details/' + sessApi + '&hotelIds=' + hotelIDs).headers(hedOpt).end(function(det){
+					if (det.body.status === 'PENDING'){
+						
+					}
+				})
+			});
 		});
 	});
 });
