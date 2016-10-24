@@ -7,37 +7,28 @@
 
 .btn-group {
 	margin-top: 10px;
-	margin-left: 1290px;
+	margin-left: 1220px;
 
 }
 
 .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    /*background: #EFE8D8;*/
-    margin-right: auto;
-    margin-left: auto;
+    padding-bottom: 10px;
 }
 
 .dropdown {
 	position: relative;
 }
 
-small{
-	font-size: 10px
-}
 
 p {
 	text-align: center;
 }
 
 .container{
-	margin-top: 50px;
+	margin-top: 25px;
+	margin-bottom: 0px;
 }
 
-.tab-content{
-
-}
 
 body {
 	font-family: 'Philosopher', sans-serif;
@@ -61,7 +52,6 @@ body {
 #home, #menu1, #menu2 {
 	background-color: black;
 	border-radius: 5px;
-	/*margin-top: -20px;*/
 	opacity: 0.75;
 	color: white;
 	padding: 10px 10px 0px 10px;
@@ -80,10 +70,37 @@ a {
 	font-weight: bold;
 }
 
+h2 {
+	font-size: 15px;
+}
+
 .navbar-default .navbar-brand {
     color: #9093D9;
-    background-color: #EFE8D8;
+ /*   background-color: #EFE8D8;*/
     }
+footer {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-left: -198px;
+
+}
+
+.dropdown-menu {
+	min-width: 135px;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");
+        background-repeat: no-repeat;	
+		background-size: 100%;
+    }
+}
 /*body {
 	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
 }*/
