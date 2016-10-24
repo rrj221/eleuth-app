@@ -20,6 +20,8 @@ import SearchPage from './Components/Search/SearchPage';
 
 import LoginPage from './Components/Login/LoginPage';
 
+import RegistrationPage from './Components/Registration/RegistrationPage';
+
 export default (
 	/* This means the Application component 
 		is gonna be the parent of all components nested w/in this route! */
@@ -38,6 +40,7 @@ export default (
 
 		<Route path="/login" component={LoginPage}/>
 
+		<Route path="/register" component={RegistrationPage}/>
 
 	</Route>
 );

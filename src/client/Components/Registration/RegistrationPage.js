@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import "./register.css";
+import "./registration.css";
 
 export default class RegistrationPage extends Component {
 
@@ -88,3 +88,9 @@ render() {
     </div>
   </div>
 </div>
+
+    )
+  }
+}
+
+
