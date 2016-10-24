@@ -7,8 +7,12 @@
 
 .btn-group {
 	margin-top: 10px;
-	margin-left: 1290px;
+	margin-left: 1225px;
 
+}
+
+.container-fluid {
+    padding-bottom: 10px;
 }
 
 .dropdown {
@@ -20,12 +24,11 @@ p {
 }
 
 .container{
-	margin-top: 50px;
+	margin-top: 25px;
+	margin-bottom: 0px;
 }
 
-.tab-content{
 
-}
 
 body {
 	font-family: 'Philosopher', sans-serif;
@@ -49,7 +52,6 @@ body {
 #home, #menu1, #menu2 {
 	background-color: black;
 	border-radius: 5px;
-	/*margin-top: -20px;*/
 	opacity: 0.80;
 	color: white;
 	padding: 10px 10px 0px 10px;
@@ -68,9 +70,27 @@ a {
 	font-weight: bold;
 }
 
+h2 {
+	font-size: 15px;
+}
 .navbar-default .navbar-brand {
-    color: purple;
+    color: #9093D9;
     }
+
+footer {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-left: -198px;
+}
+
+.dropdown-menu {
+	min-width: 130px;
+}
 /*body {
 	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
 }*/
