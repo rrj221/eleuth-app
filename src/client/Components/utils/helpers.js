@@ -245,6 +245,204 @@ const helpers = {
 			callback(display);
 		    // res.json({ data: toClient });
 		});
+	},
+
+	hotelSearch(searchObj, callback) {
+		console.log(searchObj);
+
+		function secondRequest(secQueryUrl) {
+			request({url: secQueryUrl, headers: {Accept: 'application/json'}}, function(error, response, lodging){
+				var lodgingObj = JSON.parse(lodging);
+				if (lodgingObj.status !== 'COMPLETE') {
+					setTimeout(function () {
+						secondRequest(secQueryUrl);
+					});
+				} else {
+					// res.json(lodgingObj);
+					detailsRequest(lodgingObj, lodgingObj.hotels, lodgingObj.urls.hotel_details);
+				}
+			});
+		}
+
+		function detailsRequest (lodging, hotels, url) {
+			var hotelIds = getHotelIds(hotels).join(',');
+			// console.log(url);
+			// console.log(hotelIds);
+
+			var queryUrl = 'http://partners.api.skyscanner.net'+url+'&hotelIds='+hotelIds;
+			// console.log(queryUrl);
+
+			request({url: queryUrl, headers: {Accept: 'application/json'}}, function (err, results, details) {
+				// console.log(err);
+				// console.log(results);
+				var detailsObj = JSON.parse(details);
+
+				giveStuffToClient(lodging, detailsObj, hotels);
+				// res.json(lodging);
+				
+			})		
+		}
+
+		function giveStuffToClient(lodging, details, hotels) {
+			var agentsInfo = details.agents;
+			var hotelsShort = getShortArray(hotels, 5);
+			var toClient = [];
+			var amenitiesAll = [];
+			var hotelBasics = [];
+				// address
+				// stars
+				// popularity
+				// amenities
+			hotelsShort.forEach(function (hotel, i) {
+				var hotelInfoObject = {};
+
+				var hotelBasicsOne = {};
+				var amenitiesSingle = [];
+
+				var hotelId = hotel.hotel_id;
+				var name = hotel.name;
+				var address = hotel.address;
+				var stars = hotel.star_rating;
+				var popularity = hotel.popularity;
+				var amenityIds = getShortArray(hotel.amenities, 10);
+				console.log(amenityIds);
+				// res.json({
+				// 	amenities: lodging.amenities
+				// });
+				amenityIds.forEach(function(id, i) {
+					console.log(getAmenityName(id, lodging.amenities));
+
+					amenitiesSingle.push(getAmenityName(id, lodging.amenities));
+
+					console.log(amenitiesSingle);
+
+					// console.log(amenities);
+				});
+
+				hotelBasicsOne = {
+					id: hotelId,
+					name: name,
+					address: address,
+					stars: stars,
+					popularity: popularity,
+					amenities: amenitiesSingle
+				}
+
+
+				// links
+				var detailsArray = [];
+				details.hotels_prices.forEach(function (priceInfo, i) {
+					if (priceInfo.id === hotelId) {
+						console.log('yaya');
+						console.log(priceInfo.id);
+						var agents = getShortArray(priceInfo.agent_prices, 5);
+						agents.forEach(function (agent, i) {
+
+
+							agentsInfo.forEach(function (agent2, i) {
+								if (agent2.id === agent.id) {
+									console.log(agent);
+									var nightlyRate = agent.price_per_room_night;
+									console.log(nightlyRate);
+									var totalRate = agent.price_total;
+									var bookingUrl = agent.booking_deeplink;
+									console.log(agent.id);
+									console.log(agent2.name);
+									var agentName = agent2.name;
+									var image_url = agent2.image_url;
+
+
+									var detailObj = {
+										name: agentName,
+										image_url: image_url,
+										nightlyRate: nightlyRate,
+										totalRate: totalRate,
+										bookingUrl: bookingUrl
+									}
+
+									detailsArray.push(detailObj);
+								}
+							})
+						})
+					}
+
+				});
+
+
+				hotelInfoObject = {
+					hotelBasicInfo: hotelBasicsOne,
+					details: detailsArray
+				}
+
+				toClient.push(hotelInfoObject);
+			});
+				
+			// res.json({hotel: details, lodging: lodging});
+			res.json({stuff: toClient});
+		}
+
+		function getAmenityName(id, amenityDetails) {
+			// console.log('lk;asdfnvkcznxl;kajs');
+			// console.log(amenityDetails[0].id);
+			var amenityName = '';
+			amenityDetails.forEach(function (amenityObj, i) {
+				if (amenityObj.id === id) {
+					amenityName = amenityObj.name;
+				}
+			})
+			return amenityName;
+		}
+
+		function getHotelIds(hotels) {
+			var hotelIds = [];
+			if (hotels.length < 5) {
+				var j = hotels.length;
+			} else {
+				var j = 5;
+			}
+
+			for (var i = 0; i < j; i++) {
+				hotelIds.push(hotels[i].hotel_id);
+			}
+
+			return hotelIds;
+		}
+
+		function getShortArray(array, n) {
+			if (array.length < n) {
+				return array;
+			} else {
+				return array.slice(0, n);
+			}
+		}
+
+
+		var destination = 
+		// getElementById('hotel-destination').value || 
+		'london', 
+		apikey = 'prtl6749387986743898559646983194', 
+		checkin = 
+		// document.getElementById('checkin').value || 
+		'2016-12-25', 
+		checkout = 
+		// document.getElementById('checkout').value || 
+		'2016-12-31', 
+		guests = 
+		// document.getElementById('guests').value || 
+		'1', 
+		rooms = 
+		// document.getElementById('rooms').value || 
+		'1',
+		entityID,
+		firstQueryUrl = 'http://partners.api.skyscanner.net/apiservices/hotels/autosuggest/v2/US/USD/en-us/' + destination + '?apikey=' + apikey,
+		secQueryUrl; 
+
+		request({url: firstQueryUrl, headers: {Accept: 'application/json'}}, function(error, response, data){
+			entityID = JSON.parse(data).results[0].individual_id;
+			console.log(entityID);
+			secQueryUrl = 'http://partners.api.skyscanner.net/apiservices/hotels/liveprices/v2/US/USD/en-us/' + entityID + '/' + checkin + '/' + checkout + '/' + guests + '/' + rooms + '/?apiKey=' + apikey;
+			secondRequest(secQueryUrl);
+		});
 	}
 }
 

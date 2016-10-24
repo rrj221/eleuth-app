@@ -32,22 +32,12 @@ class Application extends Component {
 
 		// set initial state
 		this.state = {
-			items: [],
 			flights: [],
 			twitter: [],
 			news: [],
 			loggedIn: false,
 			loggedInUser: {}
 		};
-	}
-	componentWillMount() {
-		fetch('/api/items')
-			.then((response) => response.json())
-			.then((json) => {
-				this.setState({
-					items: json
-				});
-			})
 	}
 
 	  static get contextTypes() {
@@ -72,31 +62,6 @@ class Application extends Component {
 		});
 	}
 
-	toggleCompleted(itemId) {
-		const { items } = this.state;
-
-		// find the first item in our state which has the ID we're looking for (itemId)
-		const item = items.find((item) => item._id === itemId);
-
-		// if we found an item w/ that id, we toggle its `isCompleted` property
-		if (item) {
-			item.isCompleted = !item.isCompleted;
-
-			fetch(`/api/items/${item._id}`, {
-				method: 'PUT',
-				body: JSON.stringify(item),
-				headers: { 'content-type': 'application/json' }
-			}).then((response) => response.json())
-				.then((json) => {
-					// then we update our state with the updated items array. note that
-					// `item` has the item by reference, meaning that when we changed its
-					// isCompleted property, the array `items` was updated as well
-					this.setState({
-						items: items
-					});
-				});
-		}
-	}
 
 	searchFlights(searchObj) {
 		console.log('begin search now');
@@ -114,6 +79,23 @@ class Application extends Component {
 						twitter: json.twitter,
 						news: json.news
 					});
+				});
+	}
+
+	searchHotels(searchObj) {
+		console.log('begin hotel search');
+		fetch('/api/skySearch', {
+			method: 'POST',
+			body: JSON.stringify(searchObj),
+			headers: { 'content-type': 'application/json' }
+		}).then((response) => response.json())
+				.then((json) => {
+					console.log(json)
+					// this.setState({
+					// 	flights: json.flights,
+					// 	twitter: json.twitter,
+					// 	news: json.news
+					// });
 				});
 	}
 
@@ -170,7 +152,6 @@ class Application extends Component {
 					  news: this.state.news,
 					  loggedIn: this.state.loggedIn,
 					  loggedInUser: this.state.loggedInUser,
-					  toggleCompleted: this.toggleCompleted.bind(this),
 					  searchFlights: this.searchFlights.bind(this),
 					  logIn: this.logIn.bind(this)
 				  })
