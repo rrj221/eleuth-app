@@ -56,7 +56,7 @@ export default class SearchPage extends Component {
 			    <li><a data-toggle="tab" href="#menu2">Things To Do</a></li>
 			  </ul>
 			  <div className="tab-content">
-			    <div id="home" className="tab-pane fade in active">
+			    <div id="home" className="tab-panel fade in active">
 			      <h3>Search Flights</h3>
 			      <br/>
 			      	<form className="flights" onSubmit={this.handleSubmit.bind(this)}>
