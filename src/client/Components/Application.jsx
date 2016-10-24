@@ -3,6 +3,24 @@ import React, { Component, cloneElement } from 'react';
 import NewTodoItem from './ToDoStuff/NewTodoItem';
 import { Router } from 'react-router';
 import "./Application.css";
+import passport from 'passport', LocalStrategy from 'passport-local'.Strategy;
+import models from '../server/models';
+import {User} from models; 
+
+// passport.use(new LocalStrategy(
+//   function(username, password, done) {
+//     User.findOne({ username: username }, function (err, user) {
+//       if (err) { return done(err); }
+//       if (!user) {
+//         return done(null, false, { message: 'Incorrect username.' });
+//       }
+//       if (!user.validPassword(password)) {
+//         return done(null, false, { message: 'Incorrect password.' });
+//       }
+//       return done(null, user);
+//     });
+//   }
+// ));
 
 class Application extends Component {
 
