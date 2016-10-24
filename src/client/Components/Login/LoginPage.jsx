@@ -33,8 +33,8 @@ render() {
       <form>
 
         <div className="form-group">
-        <label>Email address</label>
-        <input type="text" className="form-control input-sm" className="email" value="" placeholder="Email address..." />
+        <label>Username</label>
+        <input type="text" className="form-control input-sm" className="email" value="" placeholder="Username..." />
         </div>
         
         <div className="form-group">
