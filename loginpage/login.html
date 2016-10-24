@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" type="text/css" href="search.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+	
+		<link rel="stylesheet" href="style.css" type="text/css" >
+
+	</head>
+
+
+	<div class="user-form-container">
+
+	<ul class="nav nav-tabs" id="form-tabs" role="tablist">
+		<li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
+		<li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+		<li role="presentation"><a href="#recover_password" aria-controls="recover_password" role="tab" data-toggle="tab">Recover Password</a></li>
+	</ul>
+
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane panel-style clearfix" id="login">
+		
+			<form>
+
+			  <div class="form-group">
+				<label>Email address</label>
+				<input type="text" class="form-control input-sm" name="email" value="" placeholder="Email address...">
+			  </div>
+			  
+			  <div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control input-sm" name="password" placeholder="Password...">
+			  </div>
+
+			  <div class="checkbox">
+				<label>
+				  <input type="checkbox" name="remember_me" value="1" > Remember me
+				</label>
+			  </div>
+
+			  <button type="submit" name="submit_button" value="login" class="btn_login">Login</button>
+			  
+			</form>
+
+		</div>
+
+		<div role="tabpanel" class="tab-pane panel-style clearfix" id="register">
+		
+			<form id="registration-form">
+
+			  <div class="form-group">
+				<label>Username</label>
+				<input type="text" name="username" class="form-control input-sm" placeholder="Username...">
+			  </div>
+
+				<div class="form-group">
+					<label>Password</label>
+					<div class="input-group">
+						<input type="password" name="password" class="form-control input-sm" placeholder="Password..." >
+						<input type="password" name="rep_password" class="form-control input-sm" placeholder="Repeat password...">
+					</div>
+				</div>	
+				
+				<div class="form-group">
+					<label>Name</label>
+					<div class="input-group">
+						<input type="text" name="first_name" class="form-control input-sm" placeholder="First..." >
+						<input type="text" name="last_name" class="form-control input-sm" placeholder="Last...">
+					</div>
+				</div>		
+											
+				<div class="form-group">
+					<label>Email address</label>
+					<input type="text" name="email_address" class="form-control input-sm" placeholder="Email address...">
+				</div>		
+											
+				<div class="form-group">
+					<label>Phone Number</label>
+					<input type="tel" name="phone_number" class="form-control input-sm" placeholder="Phone Number...">
+				</div>		
+											
+				
+			  <button type="button" name="submit_button" value="register" class="btn_register">Register</button>
+			  
+			</form>
+			
+			
+
+		</div>
+
+		<div role="tabpanel" class="tab-pane panel-style clearfix" id="recover_password">
+		
+			<form>
+			
+			  <div class="form-group">
+				<label>Email address</label>
+				<input type="text" class="form-control input-sm" name="rec_email" value="" placeholder="Email address...">
+			  </div>
+			  
+			  <button type="submit" name="submit_button" value="recover_password" class="btn_recover">Recover Password</button>
+			  
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+	<script type ="text/javascript" src="app.js"></script>
+
+</html>

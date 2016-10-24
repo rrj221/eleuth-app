@@ -6,7 +6,7 @@ module.exports = {
 
   output: {
     filename: "bundle.js",
-    "path": "./dist",
+    "path": "./public",
     "publicPath": "/static"
   },
 
@@ -45,7 +45,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.jsx', '.js', ".json"]
+    extensions: ['', '.jsx', '.js', '.json']
   }
 
 }

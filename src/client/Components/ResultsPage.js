@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Flight from './Flight';
 import Tweet from './Tweet';
+import Article from './Article.js';
 
 import styled from 'styled-components';
 
@@ -22,7 +23,7 @@ const ul = styled.section`
   background: #9783c8;
 `;
 
-export default class FlightPage extends Component {
+export default class ResultsPage extends Component {
 	constructor(props, context) {
 
 		super(props, context);
@@ -44,11 +45,30 @@ export default class FlightPage extends Component {
     const { flights } = this.props;
     const tweetsOld = this.state.twitter;
     const tweets = this.props.twitter;
+    const news = this.props.news;
   	console.log(flights);
+    console.log(tweets);
     return (
       <div id='MasterPage'>
 
-        <div className='col-md-9'>
+        <div className='col-md-2'>
+          News
+          {
+            news.map((article) => 
+              <Wrapper>
+                This is one article
+                <Article
+                  title={article.title}
+                  url={article.url}
+                  publishedDate={article.publishedDate}
+                  text={article.text}
+                />
+                </Wrapper>
+            )
+          }
+        </div>
+
+        <div className='col-md-8'>
           Flights
         		{
         			flights.map((flight) => 
@@ -66,7 +86,7 @@ export default class FlightPage extends Component {
         		}
         </div>
 
-        <div className='col-md-3'>
+        <div className='col-md-2'>
           Tweets
           {
             tweets.map((tweet) => 
@@ -82,6 +102,7 @@ export default class FlightPage extends Component {
             )
           }
         </div>
+    </div>
     )
   }
 }

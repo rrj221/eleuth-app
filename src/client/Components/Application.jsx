@@ -1,8 +1,26 @@
 
 import React, { Component, cloneElement } from 'react';
-import NewTodoItem from './NewTodoItem';
+import NewTodoItem from './ToDoStuff/NewTodoItem';
 import { Router } from 'react-router';
 import "./Application.css";
+import passport from 'passport', LocalStrategy from 'passport-local'.Strategy;
+import models from '../server/models';
+import {User} from models; 
+
+// passport.use(new LocalStrategy(
+//   function(username, password, done) {
+//     User.findOne({ username: username }, function (err, user) {
+//       if (err) { return done(err); }
+//       if (!user) {
+//         return done(null, false, { message: 'Incorrect username.' });
+//       }
+//       if (!user.validPassword(password)) {
+//         return done(null, false, { message: 'Incorrect password.' });
+//       }
+//       return done(null, user);
+//     });
+//   }
+// ));
 
 class Application extends Component {
 
@@ -16,7 +34,10 @@ class Application extends Component {
 		this.state = {
 			items: [],
 			flights: [],
-			twitter: []
+			twitter: [],
+			news: [],
+			loggedIn: false,
+			loggedInUser: {}
 		};
 	}
 	componentWillMount() {
@@ -39,25 +60,16 @@ class Application extends Component {
 	// item just like we did with `toggleCompleted`: we have to setup a way for
 	// our child components to update OUR state. in `render` we pass it down
 	// (bound to `this`) to a child component.
-	addNewItem(text) {
-		const { items } = this.state;
+	logIn(user) {
 
-		const newItem = {
-			text // ES6 shorthand for `text: text`
+		const user = {
+			user // ES6 shorthand for `text: text`
 		};
 
-		fetch('/api/items', {
-			method: 'POST',
-			body: JSON.stringify(newItem),
-			headers: {
-				'content-type': 'application/json'
-			}
-		}).then((response) => response.json())
-			.then((json) => {
-				this.setState({
-					items: items.concat(json)
-				});
-			});
+		this.setState({
+			loggedInUser: user,
+			loggedIn: true
+		});
 	}
 
 	toggleCompleted(itemId) {
@@ -99,7 +111,8 @@ class Application extends Component {
 					console.log(json)
 					this.setState({
 						flights: json.flights,
-						twitter: json.twitter
+						twitter: json.twitter,
+						news: json.news
 					});
 				});
 	}
@@ -113,10 +126,9 @@ class Application extends Component {
 
 	render() {
 		return (
-		<div className="Application">
-			      <div id='universalPage'>
-	      <head>
 
+		<div className='Application'>
+			    <div id='universalPage'>
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
 			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
@@ -126,20 +138,17 @@ class Application extends Component {
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
 
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-			
-			<link rel="stylesheet" type="text/css" href="/public/Application.css"/>
 
 			<link rel="icon" type="image/png" src="styling/jumpingFrog.png" sizes="32x32" />
 
 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
 			<title>Flights Search</title>
-		  </head>
-      		Master page in Application.jsx
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
-	      		<a className="navbar-brand" href="#">Eleuth {"\n"}<small>Leap into the World</small></a>
+	      		<div><a className="navbar-brand" href="#">Eleuth </a></div>
+	      		<small>Leap into the World</small>
 	    	</div>
 	    <div className="btn-group">
 	    	<div className="dropdown">
@@ -158,8 +167,12 @@ class Application extends Component {
 					  items: this.state.items,
 					  flights: this.state.flights,
 					  twitter: this.state.twitter,
+					  news: this.state.news,
+					  loggedIn: this.state.loggedIn,
+					  loggedInUser: this.state.loggedInUser,
 					  toggleCompleted: this.toggleCompleted.bind(this),
-					  searchFlights: this.searchFlights.bind(this)
+					  searchFlights: this.searchFlights.bind(this),
+					  logIn: this.logIn.bind(this)
 				  })
 				}
 					<footer> Eleuth Footer </footer>

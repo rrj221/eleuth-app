@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TodoItemList from '../Components/TodoItemList';
+import TodoItemList from '../Components/ToDoStuff/TodoItemList';
 
 class CompletedPage extends Component {
 
