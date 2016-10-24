@@ -17,7 +17,9 @@ class Application extends Component {
 			items: [],
 			flights: [],
 			twitter: [],
-			news: []
+			news: [],
+			loggedIn: false,
+			loggedInUser: {}
 		};
 	}
 	componentWillMount() {
@@ -40,25 +42,16 @@ class Application extends Component {
 	// item just like we did with `toggleCompleted`: we have to setup a way for
 	// our child components to update OUR state. in `render` we pass it down
 	// (bound to `this`) to a child component.
-	addNewItem(text) {
-		const { items } = this.state;
+	logIn(user) {
 
-		const newItem = {
-			text // ES6 shorthand for `text: text`
+		const user = {
+			user // ES6 shorthand for `text: text`
 		};
 
-		fetch('/api/items', {
-			method: 'POST',
-			body: JSON.stringify(newItem),
-			headers: {
-				'content-type': 'application/json'
-			}
-		}).then((response) => response.json())
-			.then((json) => {
-				this.setState({
-					items: items.concat(json)
-				});
-			});
+		this.setState({
+			loggedInUser: user,
+			loggedIn: true
+		});
 	}
 
 	toggleCompleted(itemId) {
@@ -117,7 +110,7 @@ class Application extends Component {
 		return (
 
 		<div className='Application'>
-			      <div id='universalPage'>
+			    <div id='universalPage'>
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
 			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
@@ -157,8 +150,11 @@ class Application extends Component {
 					  flights: this.state.flights,
 					  twitter: this.state.twitter,
 					  news: this.state.news,
+					  loggedIn: this.state.loggedIn,
+					  loggedInUser: this.state.loggedInUser,
 					  toggleCompleted: this.toggleCompleted.bind(this),
-					  searchFlights: this.searchFlights.bind(this)
+					  searchFlights: this.searchFlights.bind(this),
+					  logIn: this.logIn.bind(this)
 				  })
 				}
 					<footer> Eleuth Footer </footer>
