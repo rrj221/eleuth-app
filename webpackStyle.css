@@ -80,11 +80,6 @@ a {
     margin-left: auto;
 }
 
-.col-lg-6 {
-  margin-top: 300px;
-  margin-left: 500px;
-}
-
 .btn-group {
   margin-top: 10px;
   margin-left: 1290px;
@@ -110,7 +105,7 @@ p {
 body {
   font-family: 'Philosopher', sans-serif;
   font-size: 18px;
-  background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");
+  /*background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");*/
   background-repeat: no-repeat; 
   background-size: 100%;
 

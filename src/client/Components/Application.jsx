@@ -1,13 +1,13 @@
 
 import React, { Component, cloneElement } from 'react';
-import NewTodoItem from './ToDoStuff/NewTodoItem';
+ import NewTodoItem from './ToDoStuff/NewTodoItem';
 import { Router } from 'react-router';
-import "./Application.css";
-import passport from 'passport';
-import { Strategy as LocalStrategy } from 'passport-local';
+// import "./Application.css";
+// import passport from 'passport';
+// import { Strategy as LocalStrategy } from 'passport-local';
 // import LocalStrategy from 'passport-local'.Strategy;
-import models from '../server/models';
-import {User} from 'models/User'; 
+// import models from '../../server/models';
+// import {User} from '../../server/models/User.js'; 
 
 // passport.use(new LocalStrategy(
 //   function(username, password, done) {
@@ -53,17 +53,17 @@ class Application extends Component {
 	// item just like we did with `toggleCompleted`: we have to setup a way for
 	// our child components to update OUR state. in `render` we pass it down
 	// (bound to `this`) to a child component.
-	logIn(user) {
+	// logIn(user) {
 
-		const user = {
-			user // ES6 shorthand for `text: text`
-		};
+	// 	// let user = {
+	// 	// 	user // ES6 shorthand for `text: text`
+	// 	// };
 
-		this.setState({
-			loggedInUser: user,
-			loggedIn: true
-		});
-	}
+	// 	this.setState({
+	// 		loggedInUser: user,
+	// 		loggedIn: true
+	// 	});
+	// }
 
 
 	searchFlights(searchObj) {
@@ -150,15 +150,15 @@ class Application extends Component {
   	</nav>			    
 				{
 					cloneElement(this.props.children, {
-					  items: this.state.items,
+					   items: this.state.items,
 					  flights: this.state.flights,
 					  twitter: this.state.twitter,
 					  news: this.state.news,
 					  loggedIn: this.state.loggedIn,
 					  loggedInUser: this.state.loggedInUser,
 					  searchFlights: this.searchFlights.bind(this),
-					  searchHotels: this.searchHotels.bind(this),
-					  logIn: this.logIn.bind(this)
+					  searchHotels: this.searchHotels.bind(this)
+					  // logIn: this.logIn.bind(this)
 				  })
 				}
 					<footer> Eleuth Footer </footer>

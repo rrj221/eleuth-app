@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Hotel from './Hotel';
+import "./accommodations.css";
 
 import styled from 'styled-components';
 
