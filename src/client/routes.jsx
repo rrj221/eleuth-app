@@ -13,6 +13,8 @@ import ResultsPage from './Components/ResultsPage';
 
 import SearchPage from './Components/Search/SearchPage';
 
+import HotelSearchPage from './Components/Hotels/HotelSearchPage';
+
 import LoginPage from './Components/Login/LoginPage';
 
 import RegistrationPage from './Components/Registration/RegistrationPage';
@@ -27,6 +29,8 @@ export default (
 		<Route path="/sky" component={ResultsPage}/>
 
 		<Route path="/search" component={SearchPage}/>
+
+		<Route path="/hotelSearch" component={HotelSearchPage}/>
 
 		<Route path="/login" component={LoginPage}/>
 

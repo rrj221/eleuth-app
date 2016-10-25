@@ -2,20 +2,18 @@ import React, {Component} from 'react';
 
 import "./accommodations.css";
 
-export default class SearchPage extends Component {
+export default class HotelSearchPage extends Component {
 
 	constructor(props, context) {
 		super(props, context);
 
 		// set initial state
 		this.state = {
-			country: '',
-			currency: '',
-			locale: '',
-			originPlace: '',
-			destinationPlace: '',
-			outbounddate: '',
-			inbounddate: ''	
+			destination: '',
+			checkin: '',
+			checkout: '',
+			guests: 1,
+			rooms: 1
 		};
 	}
 
@@ -31,7 +29,7 @@ export default class SearchPage extends Component {
 		console.log('submit');
 		// console.log(this.state);
 		// console.log(this.state.country);
-		this.props.searchFlights(this.state);
+		this.props.searchHotels(this.state);
 	}
 
   render() {
@@ -87,22 +85,22 @@ export default class SearchPage extends Component {
 		   	<div id="home" className="tab-pane fade in active">
 		      	<h3>Search Accommodations</h3>
 		      	<br/>
-			  	 <form>
+			  	 <form onSubmit={this.handleSubmit.bind(this)}>
 				  <div className="form-group">
 				    <label>Going To</label>
-				    <input type="string" className="form-control" placeholder="Destination"/>
+				    <input type="string" className="form-control" id='destination' onChange={this.handleChange.bind(this)} placeholder="Destination"/>
 				  </div>
 				  <div className="row">
 				  	<div className="col-md-6 col-xs-12">
 					  <div className="form-group">
 					    <label>Check In</label>
-					    <input type="date" className="form-control"/>
+					    <input type="date" id='checkin' onChange={this.handleChange.bind(this)} className="form-control"/>
 					  </div>
 					</div>
 					<div className="col-md-6 col-xs-12">
 						<div className="form-group">
 					    <label>Check Out</label>
-					    <input type="date" className="form-control"/>
+					    <input type="date" id='checkout' onChange={this.handleChange.bind(this)} className="form-control"/>
 					</div>
 				  </div>
 				  </div>
