@@ -3,9 +3,11 @@ import React, { Component, cloneElement } from 'react';
 import NewTodoItem from './ToDoStuff/NewTodoItem';
 import { Router } from 'react-router';
 import "./Application.css";
-import passport from 'passport', LocalStrategy from 'passport-local'.Strategy;
+import passport from 'passport';
+import { Strategy as LocalStrategy } from 'passport-local';
+// import LocalStrategy from 'passport-local'.Strategy;
 import models from '../server/models';
-import {User} from models; 
+import {User} from 'models/User'; 
 
 // passport.use(new LocalStrategy(
 //   function(username, password, done) {
