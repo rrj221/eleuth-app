@@ -35,6 +35,7 @@ class Application extends Component {
 			flights: [],
 			twitter: [],
 			news: [],
+			hotels: [],
 			loggedIn: false,
 			loggedInUser: {}
 		};
@@ -84,7 +85,7 @@ class Application extends Component {
 
 	searchHotels(searchObj) {
 		console.log('begin hotel search');
-		fetch('/api/skySearch', {
+		fetch('/api/hotelSearch', {
 			method: 'POST',
 			body: JSON.stringify(searchObj),
 			headers: { 'content-type': 'application/json' }
@@ -153,6 +154,7 @@ class Application extends Component {
 					  loggedIn: this.state.loggedIn,
 					  loggedInUser: this.state.loggedInUser,
 					  searchFlights: this.searchFlights.bind(this),
+					  searchHotels: this.searchHotels.bind(this),
 					  logIn: this.logIn.bind(this)
 				  })
 				}
