@@ -131,6 +131,7 @@ class Application extends Component {
 		<div className="container-fluid">
 	    	<div className="navbar-header">
 	      		<div><a className="navbar-brand" href="#">Eleuth </a></div>
+	      			<img id="image" src="/assets/images/jumpingFrog.png" alt="logo"/>
 	      		<small>Leap into the World</small>
 	    	</div>
 	    <div className="btn-group">
@@ -138,8 +139,8 @@ class Application extends Component {
 				<button className="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile <span class="caret"></span>
 				</button>
 				  <ul className="dropdown-menu">
-				    <li><a href="#">Login</a></li>
-				    <li><a href="#">Sign Up</a></li>
+				    <li><a href="#login">Login</a></li>
+				    <li><a href="#register">Sign Up</a></li>
 				  </ul>
 				</div>
 			</div>

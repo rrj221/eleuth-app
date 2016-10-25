@@ -3,7 +3,30 @@ import React, {Component} from 'react';
 import "./login.css";
 
 export default class LoginPage extends Component {
+  // constructor(props) {
 
+  //     super(props);
+
+  //     // set initial state
+  //     this.state = {
+  //       loginStatus: undefined
+  //     };
+
+
+  //     this.changeLoginStatus = this.changeLoginStatus.bind(this);
+  //     this.attemptLogin = this.attemptLogin.bind(this);
+  // }
+
+  // changeLoginStatus (status) {
+  //   this.setState({loginStatus: status});
+  // };
+
+  // attemptLogin(postData);
+  // $.ajax({
+  //   url: '/login',
+  //   type: 'POST',
+    
+  // })
 render() {
     return (
 <div id='LoginPage'>
