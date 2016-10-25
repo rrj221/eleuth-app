@@ -41,23 +41,23 @@ export default class HotelSearchPage extends Component {
 
 		<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 
-		<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet" />
 
 		<title>Accommodations Search</title>
 
 
 
 
-		<nav className="navbar navbar-default">
-			<div className="container-fluid">
+	<nav className="navbar navbar-default">
+		<div className="container-fluid">
 		    	<div className="navbar-header">
 		      		<a className="navbar-brand" href="#">
 		      			<img src="Eleuth 2.0.png" width= "150px" height= "30px"/>
@@ -73,8 +73,8 @@ export default class HotelSearchPage extends Component {
 					  </ul>
 				</div>
 			</div>
-		    </div>
-	  	</nav>
+		</div>
+	</nav>
 	  	<div className="container">
 		  <ul className="nav nav-tabs">
 		    <li className="active"><a data-toggle="tab" href="#home">Accommodations</a></li>
@@ -116,6 +116,7 @@ export default class HotelSearchPage extends Component {
 </div>
 
 
+</div>
     )
   }
 }
