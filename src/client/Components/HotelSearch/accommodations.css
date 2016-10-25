@@ -1,0 +1,96 @@
+
+
+.col-lg-6 {
+	margin-top: 300px;
+	margin-left: 500px;
+}
+
+.btn-group {
+	margin-top: 10px;
+	margin-left: 1225px;
+
+}
+
+.container-fluid {
+    padding-bottom: 10px;
+}
+
+.dropdown {
+	position: relative;
+}
+
+p {
+	text-align: center;
+}
+
+.container{
+	margin-top: 25px;
+	margin-bottom: 0px;
+}
+
+
+
+body {
+	font-family: 'Philosopher', sans-serif;
+	font-size: 18px;
+	background-image: url("https://www.omnihotels.com/-/media/images/hotels/ausctr/pool/ausctr-omni-austin-hotel-downtown-evening-pool.jpg?h=660&la=en&w=1170");
+	background-repeat: no-repeat;	
+	background-size: 100%;
+
+}
+
+.flights {
+	margin-bottom: 10px;
+}
+
+.navbar-brand{
+	font-weight: bolder;
+	font-size: 30px;
+
+}
+
+#home, #menu1, #menu2 {
+	background-color: black;
+	border-radius: 5px;
+	opacity: 0.80;
+	color: white;
+	padding: 10px 10px 0px 10px;
+}
+
+.nav-tabs{
+	color: white;
+}
+
+.btn-default {
+	margin-bottom: 10px;
+}
+
+a {
+	color: white;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 15px;
+}
+.navbar-default .navbar-brand {
+    color: #9093D9;
+    }
+
+footer {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-left: -198px;
+}
+
+.dropdown-menu {
+	min-width: 130px;
+}
+/*body {
+	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
+}*/
