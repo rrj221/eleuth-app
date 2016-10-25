@@ -1,0 +1,123 @@
+import React, {Component} from 'react';
+
+import "./accommodations.css";
+
+export default class SearchPage extends Component {
+
+	constructor(props, context) {
+		super(props, context);
+
+		// set initial state
+		this.state = {
+			country: '',
+			currency: '',
+			locale: '',
+			originPlace: '',
+			destinationPlace: '',
+			outbounddate: '',
+			inbounddate: ''	
+		};
+	}
+
+	handleChange(event) {
+		console.log('change');
+    	let newState = {};
+    	newState[event.target.id] = event.target.value;
+    	this.setState(newState);
+	}
+
+	handleSubmit(event) {
+		event.preventDefault();
+		console.log('submit');
+		// console.log(this.state);
+		// console.log(this.state.country);
+		this.props.searchFlights(this.state);
+	}
+
+  render() {
+    return (
+
+    <div>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+
+		<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+
+		<title>Accommodations Search</title>
+
+
+
+
+		<nav className="navbar navbar-default">
+			<div className="container-fluid">
+		    	<div className="navbar-header">
+		      		<a className="navbar-brand" href="#">
+		      			<img src="Eleuth 2.0.png" width= "150px" height= "30px"/>
+		      		</a>
+		    	</div>
+		    <div className="btn-group">
+		    	<div className="dropdown">
+					<button className="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile <span className="caret"></span>
+					</button>
+					  <ul className="dropdown-menu">
+					    <li><a href="#">Login</a></li>
+					    <li><a href="#">Sign Up</a></li>
+					  </ul>
+				</div>
+			</div>
+		    </div>
+	  	</nav>
+	  	<div className="container">
+		  <ul className="nav nav-tabs">
+		    <li className="active"><a data-toggle="tab" href="#home">Accommodations</a></li>
+		    <li><a data-toggle="tab" href="#menu1">Flights</a></li>
+		    <li><a data-toggle="tab" href="#menu2">Things To Do</a></li>
+		  </ul>
+		  <div className="tab-content">
+		   	<div id="home" className="tab-pane fade in active">
+		      	<h3>Search Accommodations</h3>
+		      	<br/>
+			  	 <form>
+				  <div className="form-group">
+				    <label>Going To</label>
+				    <input type="string" className="form-control" placeholder="Destination"/>
+				  </div>
+				  <div className="row">
+				  	<div className="col-md-6 col-xs-12">
+					  <div className="form-group">
+					    <label>Check In</label>
+					    <input type="date" className="form-control"/>
+					  </div>
+					</div>
+					<div className="col-md-6 col-xs-12">
+						<div className="form-group">
+					    <label>Check Out</label>
+					    <input type="date" className="form-control"/>
+					</div>
+				  </div>
+				  </div>
+				  <button type="submit" className="btn btn-default">Search</button>
+				</form>
+			</div>
+		</div>
+		<div className="container">
+	     <footer>
+	       <center><p>Copyright</p></center>
+	     </footer> 
+	 	</div>
+</div>
+
+
+    )
+  }
+}
