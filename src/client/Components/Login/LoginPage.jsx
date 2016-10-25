@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import "./login.css";
 
-export default class LoginPage extends Component {
+// export default class LoginPage extends Component {
   // constructor(props) {
 
   //     super(props);
@@ -25,8 +25,11 @@ export default class LoginPage extends Component {
   // $.ajax({
   //   url: '/login',
   //   type: 'POST',
-    
+
   // })
+
+const LoginPage = React.createClass({
+
 render() {
     return (
 <div id='LoginPage'>
@@ -140,6 +143,6 @@ render() {
 </div>
     )
   }
-}
+});
 
 
