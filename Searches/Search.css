@@ -49,7 +49,7 @@ body {
 
 }
 
-.tab-pane fade in active .flights, .tab-pane fade .flights, .tab-pane fade .flights  {
+.tab-pane.fade.in.active.flights, .tab-pane.fade .flights, .tab-pane.fade .flights, {
 	background-color: black;
 	border-radius: 5px;
 	opacity: 0.75;
@@ -100,6 +100,15 @@ footer .flights {
         background-repeat: no-repeat;	
 		background-size: 100%;
     }
+}
+
+.tab-content.flights>.active {
+	background-color: black;
+	border-radius: 5px;
+	opacity: 0.75;
+	color: white;
+	padding: 10px 10px 10px 10px;
+	margin-top: -25px;
 }
 /*body {
 	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
