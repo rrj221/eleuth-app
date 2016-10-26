@@ -24,7 +24,7 @@ export default class Detail extends Component {
         <div>
           Total Rate: {this.props.totalRate}
         </div>
-        <a href={this.props.bookingUrl}>Book a room</a>
+        <a href={this.props.bookingUrl}>Book</a>
         <br/>
       </div>
     </Wrapper>

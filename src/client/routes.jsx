@@ -13,11 +13,11 @@ import ResultsPage from './Components/ResultsPage';
 
 import SearchPage from './Components/Search/SearchPage';
 
-import HotelSearchPage from './Components/Hotels/HotelSearchPage';
+import HotelSearchPage from './Components/HotelSearch/HotelSearchPage';
 
-import LoginPage from './Components/Login/LoginPage';
+// import LoginPage from './Components/Login/LoginPage';
 
-import RegistrationPage from './Components/Registration/RegistrationPage';
+// import RegistrationPage from './Components/Registration/RegistrationPage';
 
 import ProfilePage from './Components/Profile/ProfilePage';
 
@@ -27,19 +27,18 @@ export default (
 
 		<Route path="/" component={IndexPage} />
 
-
 		<Route path="/sky" component={ResultsPage}/>
 
 		<Route path="/search" component={SearchPage}/>
 
 		<Route path="/hotelSearch" component={HotelSearchPage}/>
 
-		<Route path="/login" component={LoginPage}/>
-
-		<Route path="/register" component={RegistrationPage}/>
-
 		<Route path="/profile" component={ProfilePage}/>
 
 
 	</Route>
 );
+
+		// <Route path="/login" component={LoginPage}/>
+
+		// <Route path="/register" component={RegistrationPage}/>

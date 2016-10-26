@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import BasicHotelInfo from './BasicHotelInfo';
-import HotelDetails from './HotelDetails';
+import BasicHotelInfo from './BasicHotelInfo.js';
+import HotelDetails from './HotelDetails.js';
 
  import styled from 'styled-components';
 
@@ -33,17 +33,16 @@ export default class Hotel extends Component {
                 <div className="col-md-4" id="outbound">
               		<BasicHotelInfo
           	    		name={this.props.basicInfo.name}
-          				address={this.props.basicInfo.address}
-          				stars={this.props.basicInfo.stars}
-          				popularity={this.props.basicInfo.popularity}
-          				duration={this.props.basicInfo.duration}
-          				amenities={this.props.basicInfo.amenities}
+          				  address={this.props.basicInfo.address}
+          				  stars={this.props.basicInfo.stars}
+          				  popularity={this.props.basicInfo.popularity}
+          			   	amenities={this.props.basicInfo.amenities}
               		/>
                 </div>
 
                 <div className="col-md-4" id="inbound">
                       <HotelDetails
-          	        	details={this.props.details}
+          	        	  details={this.props.details}
                       />
                  </div>     
 
