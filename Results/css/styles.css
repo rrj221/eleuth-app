@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400);
 body {
-  background-color:#e0e0e0;
+  background-color:white;
   -webkit-font-smoothing: antialiased;
   font: normal 14px 'Philosopher', sans-serif;
 }
@@ -33,17 +33,24 @@ textarea {
 .panel .btn i,.btn span{
  color:#666666;
 }
-.panel .panel-heading {
- background-color:#ffffff;
+.panel > .panel-heading {
+ background-image:none;
+ background-color: #076d85;
  font-weight:700;
  font-size:16px;
  color:#9093d9;
  border-color:#ffffff;
+ border-radius:4px;
 }
 .panel .panel-heading a {
  font-weight:400;
  font-size:11px;
 }
+
+.panel .panel-default .panel-heading{
+background-color: black;
+}
+
 .panel .panel-default {
  border-color:#cccccc;
 }
@@ -62,18 +69,7 @@ h3,h4,h5 {
  border-bottom-width:1px;
  padding-bottom:10px;
 }
-.modal-dialog {
- width: 450px;
-}
-.modal-footer {
- border-width:0;
-}
-.dropdown-menu {
- background-color:#f4f4f4;
- border-color:#f0f0f0;
- border-radius:0;
- margin-top:-1px;
-}
+
 /* end theme */
 
 /* template layout*/
@@ -105,3 +101,12 @@ h3,h4,h5 {
   margin-left: 1200px;
   margin-top: 10px;
 }
+
+.dropdown-menu {
+	min-width: 135px;
+}
+
+h4{
+	font-weight: bold;
+}
+
