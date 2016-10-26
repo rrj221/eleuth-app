@@ -36,6 +36,11 @@ const helpers = {
 						console.log('made the request');
 						var display = [];
 
+						if (!response.body) {
+							console.log('no body');
+							return helpers.skyScannerFlightSearch(searchObj, callback)
+						}
+
 						for (var i = 0; i < 5; i++) {
 							var status = response.body.Status;
 							var itineraries = response.body.Itineraries;

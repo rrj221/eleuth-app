@@ -72,7 +72,7 @@ class Application extends Component {
 	searchFlights(searchObj) {
 		console.log('begin search now');
 		console.log(searchObj);
-
+		this.context.router.push('/loading');
 		fetch('/api/skySearch', {
 			method: 'POST',
 			body: JSON.stringify(searchObj),
@@ -90,6 +90,7 @@ class Application extends Component {
 
 	searchHotels(searchObj) {
 		console.log('begin hotel search');
+		this.context.router.push('/loading');
 		fetch('/api/hotelSearch', {
 			method: 'POST',
 			body: JSON.stringify(searchObj),
