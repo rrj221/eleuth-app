@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 	<head>
 
@@ -22,9 +22,9 @@
 
 	<title>Accommodations Search</title>
 	</head>
-	<body>
+	<body class="hotelBody">
 	<nav class="navbar navbar-default">
-		<div class="container-fluid">
+		<div class="container-fluid hotels">
 	    	<div class="navbar-header">
 	      		<a class="navbar-brand" href="#">
 	      			<img src="Eleuth 2.0.png" width= "150px" height= "30px"/>
@@ -42,14 +42,14 @@
 		</div>
 	    </div>
   	</nav>
-  	<div class="container">
+  	<div class="container hotels">
 	  <ul class="nav nav-tabs">
 	    <li class="active"><a data-toggle="tab" href="#home">Accommodations</a></li>
 	    <li><a data-toggle="tab" href="#menu1">Flights</a></li>
-	    <li><a data-toggle="tab" href="#menu2">Things To Do</a></li>
+	    
 	  </ul>
 	  <div class="tab-content">
-	   	<div id="home" class="tab-pane fade in active">
+	   	<div id="home" class="tab-pane fade in active hotels">
 	      	<h3>Search Accommodations</h3>
 	      	<br>
 		  	 <form>
@@ -74,7 +74,7 @@
 			  <button type="submit" class="btn btn-default">Search</button>
 			</form>
 		</div>
-		<div id="menu1" class="tab-pane fade">
+		<div id="menu1" class="tab-pane fade hotels">
 	      <h3>Search Flights</h3>
 	      <br>
 	      	<form class="flights">
@@ -182,57 +182,13 @@
 				  </form>
 			</form>
 		</div>
-			<div id="menu2" class="tab-pane fade">
-	    	<h3>Search Things To Do</h3>
-	    	<form>
-			  <div class="form-group accomm">
-			    <label>Destination</label>
-			    <input type="string" class="form-control" placeholder="Destination">
-			  </div>
-			  <div class="row">
-			  	<div class="col-md-6 col-xs-12">
-				  <div class="form-group">
-				    <label>From</label>
-				    <input type="date" class="form-control">
-				  </div>
-				</div>
-				<div class="col-md-6 col-xs-12">
-				  <div class="form-group">
-				    <label>To</label>
-				    <input type="date" class="form-control">
-				  </div>
-				</div>
-			  </div>
-			  <button type="submit" class="btn btn-default">Search</button>
-			</form>
-	    </div>
-	  </div>
+			
 	</div>
 	</div>
-	<div class="container">
+<!-- 	<div class="container">
      <footer>
        <center><p>Copyright</p></center>
      </footer> 
- 	</div>
+ 	</div> -->
 </body>
 </html>
-<!-- <div class="col-lg-6">
-    <p>Flight Search</p>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Flights">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Search</button>
-      </span>
-    </div>
-  </div>
-  <div class="col-lg-6">
-      <p>Destination Search</p>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Destination">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Search</button>
-      </span>
-    </div>
-  </div>
-</body>
-</html> -->
