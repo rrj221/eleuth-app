@@ -164,7 +164,18 @@ class Application extends Component {
 					  // logIn: this.logIn.bind(this)
 				  })
 				}
-					<footer> Eleuth Footer </footer>
+					<div id="footer">
+      <div class="container">
+        <div class="row centered">
+          <div class="col-md-8 col-md-offset-2">
+            <a href="https://github.com/jrizza88" img id="image"></a>
+            <a href="https://www.linkedin.com/in/jamartorres"><i class="ion-social-linkedin"></i></a>
+            <a href="https://twitter.com/JamarTorres"><i class="ion-social-twitter"></i></a>
+            <a href="https://instagram.com/JamarTorres"><i class="ion-social-instagram"></i></a>
+          </div>{/*col-md-8*/}
+        </div>
+      </div>{/*}container*/}
+    </div>{/*#footer*/}
 			</div>
 		</div>
 		);
