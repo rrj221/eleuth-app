@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+  <body>
+    <h1> Searching... </h1>
+      <div>
+        <img class="airPlane" src="http://images.clipartpanda.com/cute-hopping-frog-clipart-hopping-frog.png" width="500" />
+
+        <img class="cloud cloud1" src="http://images.clipartpanda.com/cloud-clip-art-cloud-md.png" />
+      </div>
+  </body>
+</html>
+
+<style>
+body {
+   background: skyblue;
+}
+
+.airPlane {
+  animation: fly 800ms ease-in-out 0s infinite alternate;
+  transition: top  1s;
+    top: 0;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  z-index: 9999;
+  display: block;
+}
+
+
+@keyframes fly {
+  0% {top: 0;}    
+  100% {top:15px;}
+}
+
+.cloud {
+  position: absolute;
+  top: 100px;
+  right: -500px;
+  opacity: .8;
+   animation: cloud 2s linear 0s infinite reverse;
+  z-index: 99;
+}
+
+@keyframes cloud {
+  from {left:-500px;}
+  to {left: 102%;}
+}
+
+</style>
