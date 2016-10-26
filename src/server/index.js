@@ -46,9 +46,13 @@ app.post('/api/skySearch', (req, res) => {
 	helpers.skyScannerFlightSearch(req.body, function (stuff) {
 		res.json(stuff);
 	});
-		// res.json({hello: 'hello'});
-		// res.json({stuffs: flights});
-	// res.json({hello: 'hello'});
+});
+
+app.post('/api/hotelSearch', (req, res) => {
+	console.log('hotel search has been posted i think');
+	helpers.hotelSearch(req.body, function (stuff) {
+		res.json(stuff);
+	});
 });
 
 

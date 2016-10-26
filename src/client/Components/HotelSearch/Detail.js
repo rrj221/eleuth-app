@@ -14,12 +14,12 @@ export default class Detail extends Component {
     return (
     <Wrapper>
       <div id='IndexPage'>
-      	<div>
-      		Name: {this.props.name}
-      	</div>
-      	<img src={this.props.image_url}/>
-      	<div>
-        	Nightly Rate: {this.props.nightlyRate}
+        <div>
+          Name: {this.props.name}
+        </div>
+        <img src={this.props.imgUrl}/>
+        <div>
+          Nightly Rate: {this.props.nightlyRate}
         </div>
         <div>
           Total Rate: {this.props.totalRate}
@@ -31,3 +31,5 @@ export default class Detail extends Component {
     )
   }
 }
+
+
