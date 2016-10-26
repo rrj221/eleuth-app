@@ -51,9 +51,8 @@ export default class SearchPage extends Component {
 				<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/></script>
 		  	<div className="container">
 			  <ul className="nav nav-tabs">
-			    <li className="active"><a data-toggle="tab" href="#home">Flights</a></li>
-			    <li><a data-toggle="tab" href="#menu1">Accommodations</a></li>
-			    <li><a data-toggle="tab" href="#menu2">Things To Do</a></li>
+			    <li className="active"><a data-toggle="tab" href="#search">Flights</a></li>
+			    <li><a data-toggle="tab" href="#hotelSearch">Accommodations</a></li>
 			  </ul>
 			  <div className="tab-content">
 			    <div id="home" className="tab-panel fade in active">
