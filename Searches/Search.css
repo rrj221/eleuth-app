@@ -11,7 +11,7 @@
 
 }
 
-.container-fluid {
+.container-fluid .flights{
     padding-bottom: 10px;
 }
 
@@ -24,7 +24,7 @@ p {
 	text-align: center;
 }
 
-.container{
+.container .flights{
 	margin-top: 25px;
 	margin-bottom: 0px;
 }
@@ -49,7 +49,7 @@ body {
 
 }
 
-#home, #menu1, #menu2 {
+.tab-pane fade in active .flights, .tab-pane fade .flights, .tab-pane fade .flights  {
 	background-color: black;
 	border-radius: 5px;
 	opacity: 0.75;
@@ -57,11 +57,11 @@ body {
 	padding: 10px 10px 0px 10px;
 }
 
-.nav-tabs{
+.nav-tabs .flights{
 	color: white;
 }
 
-.btn-default {
+.btn-default .flights{
 	margin-bottom: 10px;
 }
 
@@ -73,12 +73,12 @@ a {
 h2 {
 	font-size: 15px;
 }
-
+ 
 .navbar-default .navbar-brand {
     color: #9093D9;
  /*   background-color: #EFE8D8;*/
     }
-footer {
+footer .flights {
 	background-color: black;
 	color: white;
 	padding: 10px;
