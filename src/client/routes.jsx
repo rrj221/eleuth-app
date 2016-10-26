@@ -17,6 +17,8 @@ import SearchPage from './Components/Search/SearchPage';
 
 import HotelSearchPage from './Components/HotelSearch/HotelSearchPage';
 
+import Loading from './Components/Loading.js';
+
 // import LoginPage from './Components/Login/LoginPage';
 
 // import RegistrationPage from './Components/Registration/RegistrationPage';
@@ -38,6 +40,8 @@ export default (
 		<Route path="/profile" component={ProfilePage}/>
 
 		<Route path='/hotelResults' component={HotelResults}/>
+
+		<Route path='/loading' component={Loading}/>
 
 
 	</Route>
