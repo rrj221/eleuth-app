@@ -2,7 +2,10 @@
 import React, { Component, cloneElement } from 'react';
  import NewTodoItem from './ToDoStuff/NewTodoItem';
 import { Router } from 'react-router';
-// import "./Application.css";
+ import "./Application.css";
+
+ import styled from 'styled-components';
+
 // import passport from 'passport';
 // import { Strategy as LocalStrategy } from 'passport-local';
 // import LocalStrategy from 'passport-local'.Strategy;
@@ -124,7 +127,7 @@ class Application extends Component {
 
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-			<link rel="icon" type="image/png" src="styling/jumpingFrog.png" sizes="32x32" />
+			<link rel="icon" type="eleuth.png" src="styling/jumpingFrog.png" sizes="32x32" />
 
 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
@@ -132,9 +135,7 @@ class Application extends Component {
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
-	      		<div><a className="navbar-brand" href="#">Eleuth </a></div>
-	      			<img id="image" src="/assets/images/jumpingFrog.png" alt="logo"/>
-	      		<small>Leap into the World</small>
+	      		<div><a className="navbar-brand" img id="image" src="eleuth.png" alt="logo" href="#search"> <img id="image" src="eleuth.png" alt="logo"/></a></div>
 	    	</div>
 	    <div className="btn-group">
 	    	<div className="dropdown">

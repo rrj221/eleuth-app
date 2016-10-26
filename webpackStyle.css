@@ -102,6 +102,10 @@ p {
 
 }
 
+#image {
+      width:75px;
+    height: 30px;
+}
 body {
   font-family: 'Philosopher', sans-serif;
   font-size: 18px;
