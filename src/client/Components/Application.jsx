@@ -94,11 +94,9 @@ class Application extends Component {
 		}).then((response) => response.json())
 				.then((json) => {
 					console.log(json)
-					// this.setState({
-					// 	flights: json.flights,
-					// 	twitter: json.twitter,
-					// 	news: json.news
-					// });
+					this.setState({
+						hotels: json.hotels
+					});
 				});
 	}
 
@@ -106,6 +104,8 @@ class Application extends Component {
 		if (prevStates.flights !== this.state.flights) {
 			console.log('whats up');
 			this.context.router.push('/sky');
+		} else if (prevStates.hotels !== this.state.hotels) {
+			this.context.router.push('/hotelResults');
 		}
 	}
 
@@ -150,14 +150,15 @@ class Application extends Component {
   	</nav>			    
 				{
 					cloneElement(this.props.children, {
-					   items: this.state.items,
+					  items: this.state.items,
 					  flights: this.state.flights,
 					  twitter: this.state.twitter,
 					  news: this.state.news,
 					  loggedIn: this.state.loggedIn,
 					  loggedInUser: this.state.loggedInUser,
+					  hotels: this.state.hotels,
 					  searchFlights: this.searchFlights.bind(this),
-					  searchHotels: this.searchHotels.bind(this)
+					  searchHotels: this.searchHotels.bind(this),
 					  // logIn: this.logIn.bind(this)
 				  })
 				}

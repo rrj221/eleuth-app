@@ -22,15 +22,15 @@ export default class HotelBasicInfo extends Component {
     return (
     <div>
       <div className='outbound'>
-        <h5> Outbound Info</h5>
+        <h5>Hotel Info</h5>
         <ul>
           <Wrapper>
-          <li>Name: {this.props.name}</li>
-          <li>Address: {this.props.address}</li>
-          <li>Arrival: {this.props.arrival}</li>
-          <li>Stars: {this.props.stars}</li>
-          <li>Popularity: {this.props.popularity}%</li>
-          <li>Amenities: {this.props.amenities}</li>
+            <li>Name: {this.props.name}</li>
+            <li>Address: {this.props.address}</li>
+            <li>Arrival: {this.props.arrival}</li>
+            <li>Stars: {this.props.stars}</li>
+            <li>Popularity: {this.props.popularity}%</li>
+            <li>Amenities: {this.props.amenities}</li>
           </Wrapper>
         </ul>
       </div>
