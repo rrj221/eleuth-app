@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Hotel from './Hotel';
-import "./accommodations.css";
+// import "./accommodations.css";
 
 import styled from 'styled-components';
 
@@ -34,13 +34,14 @@ export default class HotelResults extends Component {
   }
 
   render() {
-    const hotels = this.state.hotels;
+    const hotelsOld = this.state.hotels;
+    const { hotels } = this.props;
 
     return (
       <div>
 
     Hotels
-    {
+        {
       hotels.map((hotel) => 
             <Wrapper>
               This is a single hotel
@@ -52,7 +53,11 @@ export default class HotelResults extends Component {
       )
     }
 
+
     </div>
     )
   }
 }
+
+
+

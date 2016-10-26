@@ -13,10 +13,9 @@ const Wrapper = styled.h5`
 export default class HotelDetails extends Component {
   render() {
     const { details } = this.props;
-    console.log(prices);
+
     return (
     <Wrapper>
-    Prices
       <div className="col-md-12">
     <ul className='list-group-item'>
       {
@@ -32,7 +31,12 @@ export default class HotelDetails extends Component {
       }
     </ul>
       </div>
+
+    
+
+
        </Wrapper>
     )
   }
 }
+

@@ -16,8 +16,8 @@ const helpers = {
 			locale: 'en-GB',
 			OriginPlace: 'EDI',
 			DestinationPlace: 'LHR',
-			outbounddate: '2016-10-24',
-			inbounddate: '2016-10-31',
+			outbounddate: '2016-10-31',
+			inbounddate: '2016-11-10',
 			locationschema: 'iata'
 		};
 		searchObj['locationschema'] = 'iata';
@@ -378,7 +378,8 @@ const helpers = {
 			});
 				
 			// res.json({hotel: details, lodging: lodging});
-			res.json({stuff: toClient});
+			// res.json({hotels: toClient});
+			callback({hotels: toClient});
 		}
 
 		function getAmenityName(id, amenityDetails) {
