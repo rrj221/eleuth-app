@@ -19,7 +19,7 @@ export default class Prices extends Component {
     return (
     <div className="options">
     Options
-  <div className="col-md-12">
+  <div>
 		<ul className='list-group-item'>
 		  {
 			prices.map((agent) =>
@@ -38,15 +38,4 @@ export default class Prices extends Component {
   }
 }
 
-  	// const { prices } = this.props;
-  	// console.log(prices);
-		 //  {
-			// prices.map((agent) =>
-			//   <Price
-			// 	agentName={agent.agentName}
-			// 	price={agent.price}
-			// 	image={agent.image}
-			// 	link={agent.link}
-			//   />
-			// )
-		 //  }
+  	

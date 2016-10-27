@@ -55,7 +55,7 @@ export default class HotelResults extends Component {
     const { news } = this.props;
     return (
       
-<div className= "HotelResultsPage">
+<div className="HotelResultsPage">
 
   <div className="container" className="hotelResultsContainer" id="main">
     <div className="row">

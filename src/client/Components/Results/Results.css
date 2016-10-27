@@ -18,10 +18,13 @@ p{
 
 .container{
 	margin-top: 100px;
+  overflow: auto;
 }
 
 .panel-body{
   overflow: auto;
+  height: 600px; /* Fix a height here */
+
 }
 
 body {
@@ -32,13 +35,25 @@ body {
   font: black;
 }
 
+#prices.col-md-4{
+  overflow: auto;
+  background-color: white;
+}
+
 .options{
-  font: black;
+  background-color: white;
+  color: black;
+}
+
+#prices{
+  overflow: auto;
+  background-color: white;
 }
 
 .flight {
 	margin-bottom: 10px;
 }
+
 
 .pull-right{
   overflow: auto;
@@ -46,6 +61,11 @@ body {
 
 list-group-item{
   font:black;
+}
+
+@media (min-width: 992px)
+.col-md-12 {
+    /* width: 100%; */
 }
 
 .ResultsPage {
@@ -60,6 +80,8 @@ list-group-item{
   background-size: 100%;
 /*  background-color: #c99504;*/
 }
+
+
 
 .panel-primary>.panel-heading {
     /* color: #fff; */
