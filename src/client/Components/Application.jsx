@@ -4,7 +4,7 @@ import React, { Component, cloneElement } from 'react';
 import { Router } from 'react-router';
 import "./Application.css";
 
- import styled from 'styled-components';
+ // import styled from 'styled-components';
 
 // import passport from 'passport';
 // import { Strategy as LocalStrategy } from 'passport-local';
@@ -149,7 +149,7 @@ class Application extends Component {
 				}
 
 			<footer className="footer">
-			      <div className="container">
+			      <div className="footerBox">
 			        		<p className="text-muted">Eleuth</p>
 			      </div>
 			</footer>

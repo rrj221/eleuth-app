@@ -32,6 +32,15 @@ body {
 	margin-bottom: 10px;
 }
 
-/*body {
-	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
-}*/
+.ResultsPage {
+  padding-top: 20px;
+  font-family: 'Philosopher', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  font-size: 18px;
+  background-image: url("https://wallpaperscraft.com/image/serenity_tulips_fence_airplane_clouds_32569_2560x1440.jpg");
+  background-repeat: no-repeat; 
+  background-size: 100%;
+  background-color: #c99504;
+}
+

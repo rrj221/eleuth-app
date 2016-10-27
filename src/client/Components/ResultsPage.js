@@ -3,25 +3,10 @@ import Flight from './Flight';
 import Tweet from './Tweet';
 import Article from './Article.js';
 
-import styled from 'styled-components';
+import "./Results/Results.css";
 
-const Wrapper = styled.h1`
-  padding: 4em;
-  background: papayawhip;
-  text-align: center;
-  font-size 1.5em;
-  color: palevioletred;
-`;
+// import styled from 'styled-components';
 
-const Title = styled.h5`
-  font-size: 1.5em;
-  text-align: center;
-  color: tomato;
-`;
-
-const ul = styled.section`
-  background: #9783c8;
-`;
 
 export default class ResultsPage extends Component {
 	constructor(props, context) {
@@ -41,6 +26,7 @@ export default class ResultsPage extends Component {
 	}
 
   render() {
+//       <div id='MasterPage'>
   	const flightsOld = this.state.flights;
     const { flights } = this.props;
     const tweetsOld = this.state.twitter;
@@ -49,10 +35,16 @@ export default class ResultsPage extends Component {
   	console.log(flights);
     console.log(tweets);
     return (
-      <div id='MasterPage'>
+<div className= "ResultsPage">
 
-        <div className='col-md-2'>
-          News
+  <div className="container" id="main">
+    <div className="row">
+        <div className="col-md-3 col-sm-6">
+         <div className="panel panel-default">
+           <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>News</h4></div>
+        <div className="panel-body">
+              <div className="clearfix"></div>
+          <hr/>
           {
             news.map((article) => 
               <Wrapper>
@@ -65,44 +57,67 @@ export default class ResultsPage extends Component {
                 />
                 </Wrapper>
             )
-          }
+          }      
+             </div>
+
+          </div>
+
         </div>
 
-        <div className='col-md-8'>
-          Flights
-        		{
-        			flights.map((flight) => 
-                <Wrapper>
-                This is a single flight
-        				<Flight
-                
-          					outboundInfo={flight.outboundInfo}
-          					inboundInfo={flight.inboundInfo}
-          					priceInfo={flight.priceInfo}
-                  
-        				/>
-                </Wrapper>
-        			)
-        		}
-        </div>
+        <div className="col-md-6 col-sm-6">
+          <div className="panel panel-default">
+          <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>Search Results</h4></div>
+          <div className="panel-body">
+          <div className="clearfix"></div>
+          <hr/>
+            
+            		{
+            			flights.map((flight) => 
+                    <Wrapper>
+                    This is a single flight
+            				<Flight
+                    
+              					outboundInfo={flight.outboundInfo}
+              					inboundInfo={flight.inboundInfo}
+              					priceInfo={flight.priceInfo}
+                      
+            				/>
+                    </Wrapper>
+            			)
+            		}
+                </div>
+            </div>
+          </div>
 
-        <div className='col-md-2'>
-          Tweets
-          {
-            tweets.map((tweet) => 
-              <Wrapper>
-                This is one tweet
-                <Tweet
-                  name={tweet.name}
-                  url={tweet.url}
-                  query={tweet.query}
-                  volume={tweet.tweet_volume}
-                />
-                </Wrapper>
-            )
-          }
+            <div className="col-md-3 col-sm-6">
+               <div className="panel panel-default">
+                 <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>Tweets</h4></div>
+                   <div className="panel-body">
+                   <div className="clearfix">
+{
+                    tweets.map((tweet) => 
+                      <Wrapper>
+                        This is one tweet
+                        <Tweet
+                          name={tweet.name}
+                          url={tweet.url}
+                          query={tweet.query}
+                          volume={tweet.tweet_volume}
+                        />
+                        </Wrapper>
+                    )
+                  }
+                   </div>
+                     <hr/>
+                 
+                    </div>
+                  </div>
+                </div>
+
+
+            </div>
         </div>
-    </div>
+      </div>
     )
   }
 }
