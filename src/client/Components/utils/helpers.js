@@ -166,7 +166,7 @@ const helpers = {
 						console.log(display[0]);
 
 						// callback(display);
-						helpers.twitterSearch(searchObj.country, display, callback);
+						helpers.twitterSearch(searchObj.country, { flights: display }, callback);
 
 					})
 				}, 5000)
@@ -204,18 +204,21 @@ const helpers = {
 					// 	twitter: trendsArray,
 					// 	flights: display
 					// });
-					var newDisplay = {
-						twitter: trendsArray,
-						flights: display
-					}
-					helpers.newsSearch(country, newDisplay, callback);
+					display['twitter'] = trendsArray;
+					// var newDisplay = {
+					// 	twitter: trendsArray,
+					// 	flights: display
+					// }
+					helpers.newsSearch(country, display, callback);
 				} else {
 					console.log(trendsArray);
-					var newDisplay = {
-						twitter: trendsArray,
-						flights: display
-					}
-					helpers.newsSearch(country, newDisplay, callback);
+					// var newDisplay = {
+					// 	twitter: trendsArray,
+					// 	flights: display
+					// }
+					display['twitter'] = trendsArray;
+
+					helpers.newsSearch(country, display, callback);
 					// callback({
 					// 	twitter: trendsArray,
 					// 	flights: display
@@ -384,7 +387,10 @@ const helpers = {
 				
 			// res.json({hotel: details, lodging: lodging});
 			// res.json({hotels: toClient});
-			callback({hotels: toClient});
+
+			// callback({hotels: toClient});
+
+			helpers.twitterSearch(searchObj.country, { hotels: toClient }, callback);
 		}
 
 		function getAmenityName(id, amenityDetails) {
