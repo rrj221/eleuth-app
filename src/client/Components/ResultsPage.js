@@ -47,7 +47,7 @@ export default class ResultsPage extends Component {
           <hr/>
           {
             news.map((article) => 
-              <Wrapper>
+              <div>
                 This is one article
                 <Article
                   title={article.title}
@@ -55,7 +55,7 @@ export default class ResultsPage extends Component {
                   publishedDate={article.publishedDate}
                   text={article.text}
                 />
-                </Wrapper>
+                </div>
             )
           }      
              </div>
@@ -69,11 +69,11 @@ export default class ResultsPage extends Component {
           <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>Search Results</h4></div>
           <div className="panel-body">
           <div className="clearfix"></div>
-          <hr/>
+          <br/>
             
             		{
             			flights.map((flight) => 
-                    <Wrapper>
+                    <div>
                     This is a single flight
             				<Flight
                     
@@ -82,7 +82,7 @@ export default class ResultsPage extends Component {
               					priceInfo={flight.priceInfo}
                       
             				/>
-                    </Wrapper>
+                    </div>
             			)
             		}
                 </div>
@@ -96,7 +96,7 @@ export default class ResultsPage extends Component {
                    <div className="clearfix">
 {
                     tweets.map((tweet) => 
-                      <Wrapper>
+                      <div>
                         This is one tweet
                         <Tweet
                           name={tweet.name}
@@ -104,11 +104,11 @@ export default class ResultsPage extends Component {
                           query={tweet.query}
                           volume={tweet.tweet_volume}
                         />
-                        </Wrapper>
+                        </div>
                     )
                   }
                    </div>
-                     <hr/>
+                     <br/>
                  
                     </div>
                   </div>
