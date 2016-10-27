@@ -99,7 +99,9 @@ class Application extends Component {
 				.then((json) => {
 					console.log(json)
 					this.setState({
-						hotels: json.hotels
+						hotels: json.hotels,
+						twitter: json.twitter,
+						news: json.news
 					});
 				});
 	}
