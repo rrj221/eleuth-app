@@ -1,3 +1,19 @@
+html {
+  height: 100%;
+  width: 100%;
+  
+}
+
+#universalPage{
+  background-color: #EFE8D8;
+}
+
+body{
+  background-color: #ece9e9;
+  background-size: 100%;
+}
+
+
 .navbar-header {
   text-align: center;
 }
@@ -11,6 +27,7 @@
     border-color: #e7e7e7;
 }
 
+
 .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
@@ -18,8 +35,9 @@
     margin-left: auto;
 }
 nav.navbar.navbar-default {
-width: 1150px;
-height: 84px;
+/*width: 1150px;*/
+width: auto;
+height: 53px;
 }
 
 div.container-fluid{

@@ -2,7 +2,7 @@
 import React, { Component, cloneElement } from 'react';
  import NewTodoItem from './ToDoStuff/NewTodoItem';
 import { Router } from 'react-router';
- import "./Application.css";
+import "./Application.css";
 
  import styled from 'styled-components';
 
@@ -118,19 +118,8 @@ class Application extends Component {
 
 		<div className='Application'>
 			    <div id='universalPage'>
-			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
-
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
-
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-			<link rel="icon" type="eleuth.png" src="styling/jumpingFrog.png" sizes="32x32" />
-
-			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
+			
+<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
 			<title>Flights Search</title>
 			<nav className="navbar navbar-default">
@@ -138,16 +127,6 @@ class Application extends Component {
 	    	<div className="navbar-header">
 	      		<div><a className="navbar-brand" img id="image" src="eleuth.png" alt="logo" href="#search"> <img id="image" src="eleuth.png" alt="logo"/></a></div>
 	    	</div>
-	    <div className="btn-group">
-	    	<div className="dropdown">
-				<button className="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile <span class="caret"></span>
-				</button>
-				  <ul className="dropdown-menu">
-				    <li><a href="#login">Login</a></li>
-				    <li><a href="#register">Sign Up</a></li>
-				  </ul>
-				</div>
-			</div>
 	   </div>
   	</nav>			    
 				{
@@ -165,9 +144,9 @@ class Application extends Component {
 				  })
 				}
 					<div id="footer">
-      <div class="container">
-        <div class="row centered">
-          <div class="col-md-8 col-md-offset-2">
+      <div className="container">
+        <div className="row centered">
+          <div className="col-md-8 col-md-offset-2">
             <a href="https://github.com/jrizza88" img id="image"></a>
             <a href="https://www.linkedin.com/in/jamartorres"><i class="ion-social-linkedin"></i></a>
             <a href="https://twitter.com/JamarTorres"><i class="ion-social-twitter"></i></a>
@@ -184,4 +163,20 @@ class Application extends Component {
 }
 
 export default Application;
+
+
+
+// <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+// 			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
+
+// 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+// 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+
+// 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+// 			<link rel="icon" type="eleuth.png" src="styling/jumpingFrog.png" sizes="32x32" />
+
+// 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 

@@ -6,17 +6,35 @@
   color: #BFB5D7;
 }
 
+.navbar-default {
+    background-color: #EFE8D8;
+    border-color: #e7e7e7;
+}
+
 .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
-    background: #EFE8D8;
     margin-right: auto;
     margin-left: auto;
+}
+nav.navbar.navbar-default {
+/*width: 1150px;*/
+width: auto;
+height: 84px;
+}
+
+div.container-fluid{
+
 }
 
 .col-lg-6 {
   margin-top: 300px;
   margin-left: 500px;
+}
+
+img {
+  width: 120px;
+  height: 25px;
 }
 
 .btn-group {
