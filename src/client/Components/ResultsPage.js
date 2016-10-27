@@ -37,7 +37,7 @@ export default class ResultsPage extends Component {
     return (
 <div className= "ResultsPage">
 
-  <div className="container" id="main">
+  <div className="container containerSearch" id="main">
     <div className="row">
         <div className="col-md-3 col-sm-6">
          <div className="panel panel-default">
