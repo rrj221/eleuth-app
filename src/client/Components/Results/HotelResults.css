@@ -1,58 +1,57 @@
 .col-lg-6 {
-	margin-top: 300px;
-	margin-left: 500px;
+  margin-top: 300px;
+  margin-left: 500px;
 }
 
 .btn-group {
-	margin-left: 1625px;
+  margin-left: 1625px;
 
 }
 
 .dropdown {
-	position: relative;
+  position: relative;
 }
 
 p{
-	text-align: center;
+  text-align: center;
 }
 
 .container{
-	margin-top: 100px;
+  margin-top: 100px;
 }
 
+.tab-content{
 
-.fMBSAo {
+}
+
+body {
+  font-family: 'Philosopher', sans-serif;
+}
+
+/*.fMBSAo {
     padding: 1px;
     font-size: 14px;
     border: 20px;
     background-color: beige;
     border-color: black;
     columns: col-md-3 col-sm-6;
-}
+}*/
 
-body {
-	font-family: 'Philosopher', sans-serif;
-}
-
-.flight {
-	margin-bottom: 10px;
-}
-
-.ResultsPage {
+.HotelResultsPage {
   padding-top: 20px;
   font-family: 'Philosopher', sans-serif;
   height: 100vh;
   width: 100vw;
   font-size: 18px;
-  background-image: url("https://wallpaperscraft.com/image/serenity_tulips_fence_airplane_clouds_32569_2560x1440.jpg");
+  background-image: url("https://www.omnihotels.com/-/media/images/hotels/ausctr/pool/ausctr-omni-austin-hotel-downtown-evening-pool.jpg?h=660&la=en&w=1170");
   background-repeat: no-repeat; 
   background-size: 100%;
-  background-color: #c99504;
 }
 
-.resultsContainer{
+.hotelResultsContainer {
   border-width: 20px;
   border-color: black;
   height: 600px; /* Fix a height here */
   overflow: auto;
  }
+

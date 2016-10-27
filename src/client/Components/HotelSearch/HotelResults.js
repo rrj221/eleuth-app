@@ -52,62 +52,80 @@ export default class HotelResults extends Component {
     const tweets = this.props.twitter;
     const { news } = this.props;
     return (
-      <div>
-        
-        <div className='col-md-2'>
-          News
+<div className= "HotelResultsPage">
+
+  <div className="container" className="hotelResultsContainer" id="main">
+    <div className="row">
+        <div className="col-md-3 col-sm-6">
+         <div className="panel panel-default">
+           <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>News</h4></div>
+        <div className="panel-body">
+              <div className="clearfix"></div>
+          <hr/>
           {
             news.map((article) => 
-              <Wrapper>
-                This is one article
+             <div>
                 <Article
                   title={article.title}
                   url={article.url}
                   publishedDate={article.publishedDate}
                   text={article.text}
                 />
-                </Wrapper>
+                </div>
             )
           }
         </div>
+    </div>
 
-        <div className='col-md-8'>
-          Hotels
+   </div>
+
+       <div className="col-md-6 col-sm-6">
+          <div className="panel panel-default">
+          <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>Search Results</h4></div>
+          <div className="panel-body">
+          <div className="clearfix"></div>
+          <br/>
               {
             hotels.map((hotel) => 
-                  <Wrapper>
+                  <div>
 
                     <Hotel
                       basicInfo={hotel.hotelBasicInfo}
                       details={hotel.details}         
                     />
-                  </Wrapper>
+                  </div>
             )
           }
-        </div>
+       </div>
+      </div>
+    </div>
 
-        <div className='col-md-2'>
-          Tweets
-          {
-            tweets.map((tweet) => 
-              <Wrapper>
-                This is one tweet
+         <div className="col-md-3 col-sm-6">
+               <div className="panel panel-default">
+                 <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>Tweets</h4></div>
+                   <div className="panel-body">
+                   <div className="clearfix">
+      {
+           tweets.map((tweet) => 
+              <div>
                 <Tweet
                   name={tweet.name}
                   url={tweet.url}
                   query={tweet.query}
                   volume={tweet.tweet_volume}
                 />
-                </Wrapper>
-            )
-          }
+                </div>
+                )
+         }
+                     <br/>
+                 
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
-
-
-    </div>
+      </div>
+</div>
     )
   }
 }
-
-
-
