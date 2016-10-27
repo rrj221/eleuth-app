@@ -72,6 +72,10 @@ p {
   margin-top: 50px;
 }
 
+.containerSearch {
+  width: 98%;
+}
+
 .flights {
   margin-bottom: 10px;
 }

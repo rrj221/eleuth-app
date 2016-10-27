@@ -23,7 +23,7 @@ export default class Hotel extends Component {
     return (
 
 <div className='hotelBody'>
-Single Hotel
+
 
 
   
