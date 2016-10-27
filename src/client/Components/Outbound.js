@@ -23,18 +23,18 @@ export default class Outbound extends Component {
     <div>
       <div className='outbound'>
         <h5> Outbound Info</h5>
-        <ul>
+        <div>
           <Wrapper>
-        	<li>Destination Station: {this.props.DestinationStation}</li>
-        	<li>Departure: {this.props.Arrival}</li>
-        	<li>Arrival: {this.props.arrival}</li>
-        	<li>Carrier Name: {this.props.carrierStuff[0].name}</li>
+        	<div>Destination Station: {this.props.Destinationstation}</div>
+        	<div>Departure: {this.props.departure}</div>
+        	<div>Arrival: {this.props.arrival}</div>
+        	<div>Carrier Name: {this.props.carrierStuff[0].name}</div>
         	<img src={this.props.carrierStuff[0].imgUrl}/>
-        	<li>Duration: {this.props.duration}</li>
-        	<li>Origin Station: {this.props.originStation}</li>
-        	<li>Stops: {this.props.stopsQty}</li>
+        	<div>Duration: {this.props.duration}</div>
+        	<div>Origin Station: {this.props.originStation}</div>
+        	<div>Stops: {this.props.stopsQty}</div>
           </Wrapper>
-        </ul>
+        </div>
 
       </div>
     </div>

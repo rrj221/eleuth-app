@@ -16,18 +16,18 @@ export default class Inbound extends Component {
       <div className='inbound'>
       
         <h5>Inbound Info</h5>
-        <ul>
+        <div>
         <Wrapper>
-        	<li>Desitation Station: {this.props.DesitationStation}</li>
-        	<li>Departure: {this.props.Arrival}</li>
-        	<li>Arrival: {this.props.arrival}</li>
-        	<li>Carrier Name: {this.props.carrierStuff[0].name}</li>
+        	<div>Desitation Station: {this.props.Destinationstation}</div>
+        	<div>Departure: {this.props.departure}</div>
+        	<div>Arrival: {this.props.arrival}</div>
+        	<div>Carrier Name: {this.props.carrierStuff[0].name}</div>
         	<img src={this.props.carrierStuff[0].imgUrl}/>
-        	<li>Duration: {this.props.duration} minutes</li>
-        	<li>Origin Station: {this.props.originStation}</li>
-        	<li>Stops: {this.props.stopsQty}</li>
+        	<div>Duration: {this.props.duration} minutes</div>
+        	<div>Origin Station: {this.props.originStation}</div>
+        	<div>Stops: {this.props.stopsQty}</div>
         </Wrapper>
-        </ul>
+        </div>
       
       </div>
     )

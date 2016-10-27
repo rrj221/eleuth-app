@@ -88,7 +88,7 @@ export default class ResultsPage extends Component {
 
             <div className="col-md-3 col-sm-6">
                <div className="panel panel-default">
-                 <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>Tweets</h4></div>
+                 <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>Trending</h4></div>
                    <div className="panel-body">
                    <div className="clearfix">
 {
