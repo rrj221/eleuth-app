@@ -28,6 +28,14 @@ body {
 	font-family: 'Philosopher', sans-serif;
 }
 
+.list-group-item{
+  font: black;
+}
+
+.options{
+  font: black;
+}
+
 .flight {
 	margin-bottom: 10px;
 }
@@ -37,7 +45,7 @@ body {
 }
 
 list-group-item{
-  color:black;
+  font:black;
 }
 
 .ResultsPage {

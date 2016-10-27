@@ -145,6 +145,9 @@ border: 1px solid #ddd;
   overflow: auto;
 }
 
+.price .prices{
+  font: black;
+}
 .btn-default {
   margin-bottom: 10px;
 }
@@ -162,6 +165,7 @@ a {
 
 ul {
   list-style-type: none;
+  color: black;
 }
 
 .footerBox {
