@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Hotel from './Hotel';
+import Tweet from '../Tweet';
+import Article from '../Article.js';
 
 import styled from 'styled-components';
 
@@ -47,22 +49,59 @@ export default class HotelResults extends Component {
   render() {
     const hotelsOld = this.state.hotels;
     const { hotels } = this.props;
-
+    const tweets = this.props.twitter;
+    const { news } = this.props;
     return (
       <div>
         
-    Hotels
-        {
-      hotels.map((hotel) => 
-            <Wrapper>
-              This is a single hotel
-          <Hotel
-            basicInfo={hotel.hotelBasicInfo}
-            details={hotel.details}         
-          />
-            </Wrapper>
-      )
-    }
+        <div className='col-md-2'>
+          News
+          {
+            news.map((article) => 
+              <Wrapper>
+                This is one article
+                <Article
+                  title={article.title}
+                  url={article.url}
+                  publishedDate={article.publishedDate}
+                  text={article.text}
+                />
+                </Wrapper>
+            )
+          }
+        </div>
+
+        <div className='col-md-8'>
+          Hotels
+              {
+            hotels.map((hotel) => 
+                  <Wrapper>
+                    This is a single hotel
+                <Hotel
+                  basicInfo={hotel.hotelBasicInfo}
+                  details={hotel.details}         
+                />
+                  </Wrapper>
+            )
+          }
+        </div>
+
+        <div className='col-md-2'>
+          Tweets
+          {
+            tweets.map((tweet) => 
+              <Wrapper>
+                This is one tweet
+                <Tweet
+                  name={tweet.name}
+                  url={tweet.url}
+                  query={tweet.query}
+                  volume={tweet.tweet_volume}
+                />
+                </Wrapper>
+            )
+          }
+        </div>
 
 
     </div>
