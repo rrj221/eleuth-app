@@ -54,6 +54,7 @@ export default class HotelResults extends Component {
     const tweets = this.props.twitter;
     const { news } = this.props;
     return (
+      
 <div className= "HotelResultsPage">
 
   <div className="container" className="hotelResultsContainer" id="main">

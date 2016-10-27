@@ -34,7 +34,7 @@ export default class Flight extends Component {
   
             <div className="container-fluid">
               <div className="row">
-                <div className="col-md-4" id="outbound">
+                <div className="col-md-6" id="outbound">
               		<Outbound 
           	    		originStation={this.props.outboundInfo.originStation}
           				Destinationstation={this.props.outboundInfo.destinationStation}
@@ -47,7 +47,7 @@ export default class Flight extends Component {
               		/>
                 </div>
 
-                <div className="col-md-4" id="inbound">
+                <div className="col-md-6" id="inbound">
                       <Inbound
           	        	originStation={this.props.inboundInfo.originStation}
           				destinationstation={this.props.inboundInfo.destinationStation}

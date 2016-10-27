@@ -38,6 +38,10 @@ body {
 	margin-bottom: 10px;
 }
 
+.pull-right{
+  overflow: auto;
+}
+
 .ResultsPage {
   padding-top: 20px;
   font-family: 'Philosopher', sans-serif;
