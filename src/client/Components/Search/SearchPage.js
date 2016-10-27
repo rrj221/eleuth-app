@@ -37,7 +37,7 @@ export default class SearchPage extends Component {
   render() {
     return (
       <div className="SearchPage">
-      
+
 				<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
 				<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
@@ -140,10 +140,10 @@ export default class SearchPage extends Component {
 						    <div className="form-group">
 						      <label for="sel1">Children (ages 2-12):</label>
 						      <select className="form-control" id="sel1">
+						        <option>0</option>
 						        <option>1</option>
 						        <option>2</option>
 						        <option>3</option>
-						        <option>4</option>
 						      </select>
 						      <br/>
 						    </div>
@@ -153,10 +153,10 @@ export default class SearchPage extends Component {
 						    <div className="form-group">
 						      <label for="sel1">Infants (ages 0-2):</label>
 						      <select className="form-control" id="sel1">
+						        <option>0</option>
 						        <option>1</option>
 						        <option>2</option>
 						        <option>3</option>
-						        <option>4</option>
 						      </select>
 						      <br/>
 						    </div>
