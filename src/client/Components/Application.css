@@ -115,6 +115,10 @@ a {
 /*    width: auto;*/
 }
 
+ul {
+  list-style-type: none;
+}
+
 .footerBox {
     width: auto;
     max-width: 680px;
