@@ -24,8 +24,10 @@ const Title = styled.h2`
 export default class Flight extends Component {
   render() {
     return (
-
+    
 <div>
+
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet" />
   <div className="panel panel-primary">
     <div className="panel-heading">
       <div className ="panel-body fixed-panel">

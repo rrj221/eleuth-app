@@ -1,25 +1,36 @@
 import React, {Component} from 'react';
 import Hotel from './Hotel';
-// import "./accommodations.css";
 
 import styled from 'styled-components';
 
+// const Wrapper = styled.h1`
+//   padding: 4em;
+//   background: papayawhip;
+//   text-align: center;
+//   font-size 1.5em;
+//    color: palevioletred;
+// `;
+
+// const Title = styled.h5`
+//   font-size: 1.5em;
+//   text-align: center;
+//   color: tomato;
+// `;
+
+// const ul = styled.section`
+//   background: #9783c8;
+// `;
+
+
 const Wrapper = styled.h1`
   padding: 4em;
-  background: papayawhip;
   text-align: center;
   font-size 1.5em;
-  color: palevioletred;
 `;
 
 const Title = styled.h5`
   font-size: 1.5em;
   text-align: center;
-  color: tomato;
-`;
-
-const ul = styled.section`
-  background: #9783c8;
 `;
 
 export default class HotelResults extends Component {
@@ -39,7 +50,7 @@ export default class HotelResults extends Component {
 
     return (
       <div>
-
+        
     Hotels
         {
       hotels.map((hotel) => 

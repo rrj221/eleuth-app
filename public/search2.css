@@ -33,10 +33,16 @@ p {
 body {
 	font-family: 'Philosopher', sans-serif;
 	font-size: 18px;
-	background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");
-	background-repeat: no-repeat;	
-	background-size: 100%;
+	
 
+}
+
+#flightsearchBody {
+background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");
+  background-repeat: no-repeat; 
+  background-size: 100%;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
 }
 
 .flights {
@@ -78,7 +84,8 @@ h2 {
     color: #9093D9;
  /*   background-color: #EFE8D8;*/
     }
-footer .flights {
+
+/*footer .flights {
 	background-color: black;
 	color: white;
 	padding: 10px;
@@ -88,7 +95,7 @@ footer .flights {
     margin-bottom: 0px;
     margin-left: -198px;
 
-}
+}*/
 
 .dropdown-menu {
 	min-width: 135px;
