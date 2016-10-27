@@ -48,7 +48,6 @@ export default class ResultsPage extends Component {
           {
             news.map((article) => 
               <div>
-                This is one article
                 <Article
                   title={article.title}
                   url={article.url}
@@ -74,7 +73,6 @@ export default class ResultsPage extends Component {
             		{
             			flights.map((flight) => 
                     <div>
-                    This is a single flight
             				<Flight
                     
               					outboundInfo={flight.outboundInfo}
@@ -97,7 +95,6 @@ export default class ResultsPage extends Component {
 {
                     tweets.map((tweet) => 
                       <div>
-                        This is one tweet
                         <Tweet
                           name={tweet.name}
                           url={tweet.url}
