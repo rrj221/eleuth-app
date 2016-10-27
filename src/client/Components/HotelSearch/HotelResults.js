@@ -5,6 +5,8 @@ import Article from '../Article.js';
 
 import styled from 'styled-components';
 
+import "../Results/HotelResults.css";
+
 // const Wrapper = styled.h1`
 //   padding: 4em;
 //   background: papayawhip;
