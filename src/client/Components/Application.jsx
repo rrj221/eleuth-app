@@ -118,6 +118,8 @@ class Application extends Component {
 
 		<div className='Application'>
 			    <div id='universalPage'>
+
+<link rel="icon" type="eleuth.png" src="styling/jumpingFrog.png" sizes="32x32" />
 			
 <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
@@ -143,20 +145,14 @@ class Application extends Component {
 					  // logIn: this.logIn.bind(this)
 				  })
 				}
-					<div id="footer">
-      <div className="container">
-        <div className="row centered">
-          <div className="col-md-8 col-md-offset-2">
-            <a href="https://github.com/jrizza88" img id="image"></a>
-            <a href="https://www.linkedin.com/in/jamartorres"><i class="ion-social-linkedin"></i></a>
-            <a href="https://twitter.com/JamarTorres"><i class="ion-social-twitter"></i></a>
-            <a href="https://instagram.com/JamarTorres"><i class="ion-social-instagram"></i></a>
-          </div>{/*col-md-8*/}
-        </div>
-      </div>{/*}container*/}
-    </div>{/*#footer*/}
-			</div>
+
+			<footer className="footer">
+			      <div className="container">
+			        		<p className="text-muted">Eleuth</p>
+			      </div>
+			</footer>
 		</div>
+	</div>
 		);
 
 	}
@@ -165,18 +161,4 @@ class Application extends Component {
 export default Application;
 
 
-
-// <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-// 			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
-
-// 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-
-// 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
-
-// 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-// 			<link rel="icon" type="eleuth.png" src="styling/jumpingFrog.png" sizes="32x32" />
-
-// 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
