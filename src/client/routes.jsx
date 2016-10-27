@@ -11,9 +11,13 @@ import IndexPage from './Pages/IndexPage';
 
 import ResultsPage from './Components/ResultsPage';
 
+import HotelResults from './Components/HotelSearch/HotelResults.js'
+
 import SearchPage from './Components/Search/SearchPage';
 
 import HotelSearchPage from './Components/HotelSearch/HotelSearchPage';
+
+import Loading from './Components/Loading.js';
 
 // import LoginPage from './Components/Login/LoginPage';
 
@@ -34,6 +38,10 @@ export default (
 		<Route path="/hotelSearch" component={HotelSearchPage}/>
 
 		<Route path="/profile" component={ProfilePage}/>
+
+		<Route path='/hotelResults' component={HotelResults}/>
+
+		<Route path='/loading' component={Loading}/>
 
 
 	</Route>

@@ -1,92 +1,153 @@
-.navbar-header {
-  text-align: center;
-}
 
-.navbar {
-  color: #BFB5D7;
-}
-
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    /*background: #EFE8D8;*/
-    margin-right: auto;
-    margin-left: auto;
-}
-
-small {
-  font-size: 10px;
-}
 .col-lg-6 {
-  margin-top: 300px;
-  margin-left: 500px;
+	margin-top: 300px;
+	margin-left: 500px;
 }
 
 .btn-group {
-  margin-top: 10px;
-  margin-left: 1290px;
+	margin-top: 10px;
+	margin-left: 1220px;
 
-}
-
-.dropdown {
-  position: relative;
-}
-
-p {
-  text-align: center;
-}
-
-.container{
-  margin-top: 50px;
-}
-
-.tab-content{
-
-}
-
-body {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 18px;
-  background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");
-  background-repeat: no-repeat; 
-  background-size: 100%;
-
-}
-
-.flights {
-  margin-bottom: 10px;
-}
-
-.navbar-brand{
-  font-weight: bolder;
-  font-size: 30px;
-
-}
-
-#home, #menu1, #menu2 {
-  background-color: black;
-  border-radius: 5px;
-  /*margin-top: -20px;*/
-  opacity: 0.75;
-  color: white;
-  padding: 10px 10px 0px 10px;
 }
 
 .nav-tabs{
-  color: white;
+       font-family: 'Philosopher', sans-serif;
 }
 
-.btn-default {
-  margin-bottom: 10px;
+.tab-content{
+       font-family: 'Philosopher', sans-serif;
+}
+.container-fluid .flights{
+    padding-bottom: 10px;
+}
+
+.dropdown {
+	position: relative;
+}
+
+#SearchPage {
+  font-family: 'Philosopher', sans-serif;
+/*  height: 100vh;
+  width: 100vw;*/
+  font-size: 18px;
+  background-image: url("https://wallpaperscraft.com/image/serenity_tulips_fence_airplane_clouds_32569_2560x1440.jpg");
+  background-repeat: no-repeat; 
+  background-size: 100%;
+    flex: 1;
+    width: null;
+    height: null
+}
+
+.div.container {
+    background-color: black;
+    border-radius: 5px;
+    opacity: 0.80;
+    color: white;
+    padding: 10px 10px 0px 10px;
+}
+
+p {
+	text-align: center;
+}
+
+.container {
+    font-family: 'Philosopher', sans-serif;
+}
+.container .flights{
+	margin-top: 25px;
+	margin-bottom: 0px;
+    font-family: 'Philosopher', sans-serif;
+}
+
+body {
+	font-family: 'Philosopher', sans-serif;
+	font-size: 18px;
+}
+
+/*#flightsearchBody {
+background-image: url("https://s-media-cache-ak0.pinimg.com/564x/dc/12/6d/dc126da7b3f3ad76f158131e66ea3f60.jpg");
+  background-repeat: no-repeat; 
+  background-size: 100%;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
+}*/
+
+.flights {
+	margin-bottom: 10px;
+}
+
+.navbar-brand{
+	font-weight: bolder;
+	font-size: 30px;
+
+}
+
+.tab-pane.fade.in.active.flights, .tab-pane.fade .flights, .tab-pane.fade .flights, {
+	background-color: black;
+	border-radius: 5px;
+	opacity: 0.75;
+	color: white;
+	padding: 10px 10px 0px 10px;
+}
+
+.nav-tabs .flights{
+	color: white;
+}
+
+.btn-default .flights{
+	margin-bottom: 10px;
 }
 
 a {
-  color: white;
-  font-weight: bold;
+	color: white;
+	font-weight: bold;
 }
 
+h2 {
+	font-size: 15px;
+}
+ 
 .navbar-default .navbar-brand {
     color: #9093D9;
-    background-color: #EFE8D8;
-    src: ;
+ /*   background-color: #EFE8D8;*/
     }
+
+/*footer .flights {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-left: -198px;
+
+}*/
+
+.dropdown-menu {
+	min-width: 135px;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");
+        background-repeat: no-repeat;	
+		background-size: 100%;
+      height: 100vh;
+      width: 100vw;
+    }
+}
+
+.tab-content.flights>.active {
+	background-color: black;
+	border-radius: 5px;
+	opacity: 0.75;
+	color: white;
+	padding: 10px 10px 10px 10px;
+	margin-top: -25px;
+}
+/*body {
+	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
+}*/

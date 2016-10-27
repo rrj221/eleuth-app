@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import "./accommodations.css";
+import "./Accommodations.css";
 
 export default class HotelSearchPage extends Component {
 
@@ -35,7 +35,7 @@ export default class HotelSearchPage extends Component {
   render() {
     return (
 
-    <div>
+    <div className="body-hotel">
 
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
@@ -53,33 +53,10 @@ export default class HotelSearchPage extends Component {
 
 		<title>Accommodations Search</title>
 
-
-
-
-	<nav className="navbar navbar-default">
-		<div className="container-fluid">
-		    	<div className="navbar-header">
-		      		<a className="navbar-brand" href="#">
-		      			<img src="Eleuth 2.0.png" width= "150px" height= "30px"/>
-		      		</a>
-		    	</div>
-		    <div className="btn-group">
-		    	<div className="dropdown">
-					<button className="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile <span className="caret"></span>
-					</button>
-					  <ul className="dropdown-menu">
-					    <li><a href="#">Login</a></li>
-					    <li><a href="#">Sign Up</a></li>
-					  </ul>
-				</div>
-			</div>
-		</div>
-	</nav>
 	  	<div className="container">
 		  <ul className="nav nav-tabs">
 		    <li className="active"><a data-toggle="tab" href="#home">Accommodations</a></li>
-		    <li><a data-toggle="tab" href="#menu1">Flights</a></li>
-		    <li><a data-toggle="tab" href="#menu2">Things To Do</a></li>
+		    <li><a data-toggle="tab" href="#search">Flights</a></li>
 		  </ul>
 		  <div className="tab-content">
 		   	<div id="home" className="tab-pane fade in active">
@@ -108,15 +85,14 @@ export default class HotelSearchPage extends Component {
 				</form>
 			</div>
 		</div>
-		<div className="container">
-	     <footer>
-	       <center><p>Copyright</p></center>
-	     </footer> 
-	 	</div>
 </div>
 
 
 </div>
+
     )
   }
 }
+
+
+

@@ -22,39 +22,76 @@ export default class Hotel extends Component {
   render() {
     return (
 
-<div>
-  <div className="panel panel-primary">
-    <div className="panel-heading">
-      <div className ="panel-body fixed-panel">
+<div className='hotelBody'>
+Single Hotel
+
+
   
-            <div className="container-fluid">
-              <div className="row">
+          <div className="fakecontainer">
+            <div className="row">
              <Title>This is a single hotel</Title>
                 <div className="col-md-4" id="outbound">
-              		<BasicHotelInfo
-          	    		name={this.props.basicInfo.name}
-          				  address={this.props.basicInfo.address}
-          				  stars={this.props.basicInfo.stars}
-          				  popularity={this.props.basicInfo.popularity}
-          			   	amenities={this.props.basicInfo.amenities}
-              		/>
+                 <BasicHotelInfo
+                   name={this.props.basicInfo.name}
+                   address={this.props.basicInfo.address}
+                   stars={this.props.basicInfo.stars}
+                   popularity={this.props.basicInfo.popularity}
+                   amenities={this.props.basicInfo.amenities}
+                 />
                 </div>
 
                 <div className="col-md-4" id="inbound">
                       <HotelDetails
-          	        	  details={this.props.details}
+                        details={this.props.details}
                       />
                  </div>     
 
                 <br/>
               </div>
-    	       </div>
-      </div>
+             </div>
+ 
 
-  </div>
 
-  </div>
+
+
  </div>
     )
   }
 }
+
+
+  // <div className="panel panel-primary">
+  //   <div className="panel-heading">
+   //    <div className ="panel-body fixed-panel">
+  
+     //        <div className="hotel-container">
+     //          <div className="row">
+     //         <Title>This is a single hotel</Title>
+       //          <div className="col-md-4" id="outbound">
+       //           <BasicHotelInfo
+        //            name={this.props.basicInfo.name}
+        //            address={this.props.basicInfo.address}
+        //          stars={this.props.basicInfo.stars}
+         //          popularity={this.props.basicInfo.popularity}
+            //        amenities={this.props.basicInfo.amenities}
+             //     />
+             //    </div>
+
+             //    <div className="col-md-4" id="inbound">
+              //         <HotelDetails
+              //           details={this.props.details}
+              //         />
+              //    </div>     
+
+              //   <br/>
+             //  </div>
+           //   </div>
+   //    </div>
+
+ //  </div>
+
+ //  </div>
+
+
+
+

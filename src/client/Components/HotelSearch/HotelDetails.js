@@ -13,26 +13,30 @@ const Wrapper = styled.h5`
 export default class HotelDetails extends Component {
   render() {
     const { details } = this.props;
-    console.log(prices);
+
     return (
-    <Wrapper>
-    Prices
-      <div className="col-md-12">
-    <ul className='list-group-item'>
-      {
-        details.map((detail) =>
-          <Detail
-            name={detail.name}
-            imgUrl={detail.image_url}
-            nightlyRate={detail.nightlyRate}
-            totalRate={detail.totalRate}
-            bookingUrl={detail.bookingUrl}
-          />
-        )
-      }
-    </ul>
-      </div>
-       </Wrapper>
+      <Wrapper>
+        <div className="col-md-12">
+          <ul className='list-group-item'>
+            {
+              details.map((detail) =>
+                <Detail
+                  name={detail.name}
+                  imgUrl={detail.image_url}
+                  nightlyRate={detail.nightlyRate}
+                  totalRate={detail.totalRate}
+                  bookingUrl={detail.bookingUrl}
+                />
+              )
+            }
+          </ul>
+        </div>
+
+          
+
+
+      </Wrapper>
     )
   }
 }
+

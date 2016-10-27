@@ -45,18 +45,17 @@ export default class SearchPage extends Component {
 
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
 
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" />
 
+				<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
-				<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/></script>
 		  	<div className="container">
 			  <ul className="nav nav-tabs">
-			    <li className="active"><a data-toggle="tab" href="#home">Flights</a></li>
-			    <li><a data-toggle="tab" href="#menu1">Accommodations</a></li>
-			    <li><a data-toggle="tab" href="#menu2">Things To Do</a></li>
+			    <li className="active"><a data-toggle="tab" href="#search">Flights</a></li>
+			    <li><a data-toggle="tab" href="#hotelSearch">Accommodations</a></li>
 			  </ul>
 			  <div className="tab-content">
-			    <div id="home" className="tab-panel fade in active">
+			    <div id="home" className="tab-pane fade in active">
 			      <h3>Search Flights</h3>
 			      <br/>
 			      	<form className="flights" onSubmit={this.handleSubmit.bind(this)}>
@@ -74,35 +73,56 @@ export default class SearchPage extends Component {
 					  	</div>
 					  </div>
 					  	<br/>
+			<div className="row">
+			 	<div className="col-md-6 col-xs-12">
 					  <div className="form-group">
 					    <label>From</label>
 					    <input type="string" className="form-control" id="originPlace" onChange={this.handleChange.bind(this)} placeholder="Airport Name"/>
 					  </div>
+				</div>
+				<div className="col-md-6 col-xs-12">
 					  <div className="form-group">
 					    <label>To</label>
 					    <input type="string" className="form-control" id="destinationPlace" onChange={this.handleChange.bind(this)} placeholder="Airport Name"/>
 					  </div>
+				</div>
+			</div>
+		<div className="row">
+			 	<div className="col-md-6 col-xs-12">
 					  <div className="form-group">
 					    <label>Outbound Date</label>
 					    <input type="string" className="form-control" id="outbounddate" onChange={this.handleChange.bind(this)} placeholder="YYYY-MM-DD"/>
 					  </div>
+				</div>
+				<div className="col-md-6 col-xs-12">
 					  <div className="form-group">
 					    <label>Inbound Date</label>
 					    <input type="string" className="form-control" id="inbounddate" onChange={this.handleChange.bind(this)} placeholder="YYYY-MM-DD"/>
 					  </div>
+				</div>
+			</div>
+		<div className="row">
+			  	<div className="col-md-4 col-xs-12">
 					  <div className="form-group">
 					    <label>Country</label>
 					    <input type="string" className="form-control" id="country" onChange={this.handleChange.bind(this)} placeholder="US"/>
 					  </div>
+					 </div>
+					<div className="col-md-4 col-xs-12">
 					  <div className="form-group">
 					    <label>Currency</label>
 					    <input type="string" className="form-control" id="currency" onChange={this.handleChange.bind(this)} placeholder="USD"/>
 					  </div>
+					</div>
+				<div className="col-md-4 col-xs-12">
 					  <div className="form-group">
 					    <label>Locale</label>
 					    <input type="string" id="locale" onChange={this.handleChange.bind(this)} className="form-control"/>
 					  </div>
-						  
+				</div>
+		</div>
+			<div className="row">
+			  	<div className="col-md-4 col-xs-12">
 						    <div className="form-group">
 						      <label for="sel1">Adults (age 12+):</label>
 						      <select className="form-control" id="sel1">
@@ -113,7 +133,9 @@ export default class SearchPage extends Component {
 						      </select>
 						      <br/>
 						    </div>
-						 
+						  </div>
+						
+						<div className="col-md-4 col-xs-12">
 						    <div className="form-group">
 						      <label for="sel1">Children (ages 2-12):</label>
 						      <select className="form-control" id="sel1">
@@ -124,7 +146,9 @@ export default class SearchPage extends Component {
 						      </select>
 						      <br/>
 						    </div>
+						   </div>
 						
+						<div className="col-md-4 col-xs-12">
 						    <div className="form-group">
 						      <label for="sel1">Infants (ages 0-2):</label>
 						      <select className="form-control" id="sel1">
@@ -135,6 +159,8 @@ export default class SearchPage extends Component {
 						      </select>
 						      <br/>
 						    </div>
+						   </div>
+						  </div>
 						  
 						   <button type="submit" className="btn btn-default">Check Availability</button>
 					</form>
@@ -183,5 +209,3 @@ export default class SearchPage extends Component {
     )
   }
 }
-
-

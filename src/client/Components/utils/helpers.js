@@ -16,8 +16,8 @@ const helpers = {
 			locale: 'en-GB',
 			OriginPlace: 'EDI',
 			DestinationPlace: 'LHR',
-			outbounddate: '2016-10-24',
-			inbounddate: '2016-10-31',
+			outbounddate: '2016-10-31',
+			inbounddate: '2016-11-10',
 			locationschema: 'iata'
 		};
 		searchObj['locationschema'] = 'iata';
@@ -35,6 +35,11 @@ const helpers = {
 					unirest.get(getURL).end(function (response) {
 						console.log('made the request');
 						var display = [];
+
+						if (!response.body) {
+							console.log('no body');
+							return helpers.skyScannerFlightSearch(searchObj, callback)
+						}
 
 						for (var i = 0; i < 5; i++) {
 							var status = response.body.Status;
@@ -378,7 +383,8 @@ const helpers = {
 			});
 				
 			// res.json({hotel: details, lodging: lodging});
-			res.json({stuff: toClient});
+			// res.json({hotels: toClient});
+			callback({hotels: toClient});
 		}
 
 		function getAmenityName(id, amenityDetails) {

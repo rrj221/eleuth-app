@@ -2,7 +2,10 @@
 import React, { Component, cloneElement } from 'react';
  import NewTodoItem from './ToDoStuff/NewTodoItem';
 import { Router } from 'react-router';
-// import "./Application.css";
+import "./Application.css";
+
+ import styled from 'styled-components';
+
 // import passport from 'passport';
 // import { Strategy as LocalStrategy } from 'passport-local';
 // import LocalStrategy from 'passport-local'.Strategy;
@@ -69,7 +72,7 @@ class Application extends Component {
 	searchFlights(searchObj) {
 		console.log('begin search now');
 		console.log(searchObj);
-
+		this.context.router.push('/loading');
 		fetch('/api/skySearch', {
 			method: 'POST',
 			body: JSON.stringify(searchObj),
@@ -87,6 +90,7 @@ class Application extends Component {
 
 	searchHotels(searchObj) {
 		console.log('begin hotel search');
+		this.context.router.push('/loading');
 		fetch('/api/hotelSearch', {
 			method: 'POST',
 			body: JSON.stringify(searchObj),
@@ -94,11 +98,9 @@ class Application extends Component {
 		}).then((response) => response.json())
 				.then((json) => {
 					console.log(json)
-					// this.setState({
-					// 	flights: json.flights,
-					// 	twitter: json.twitter,
-					// 	news: json.news
-					// });
+					this.setState({
+						hotels: json.hotels
+					});
 				});
 	}
 
@@ -106,6 +108,8 @@ class Application extends Component {
 		if (prevStates.flights !== this.state.flights) {
 			console.log('whats up');
 			this.context.router.push('/sky');
+		} else if (prevStates.hotels !== this.state.hotels) {
+			this.context.router.push('/hotelResults');
 		}
 	}
 
@@ -114,54 +118,43 @@ class Application extends Component {
 
 		<div className='Application'>
 			    <div id='universalPage'>
-			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
-
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
-
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-			<link rel="icon" type="image/png" src="styling/jumpingFrog.png" sizes="32x32" />
-
-			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
+			
+<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 
 			<title>Flights Search</title>
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
-	      		<div><a className="navbar-brand" href="#">Eleuth </a></div>
-	      			<img id="image" src="/assets/images/jumpingFrog.png" alt="logo"/>
-	      		<small>Leap into the World</small>
+	      		<div><a className="navbar-brand" img id="image" src="eleuth.png" alt="logo" href="#search"> <img id="image" src="eleuth.png" alt="logo"/></a></div>
 	    	</div>
-	    <div className="btn-group">
-	    	<div className="dropdown">
-				<button className="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile <span class="caret"></span>
-				</button>
-				  <ul className="dropdown-menu">
-				    <li><a href="#login">Login</a></li>
-				    <li><a href="#register">Sign Up</a></li>
-				  </ul>
-				</div>
-			</div>
 	   </div>
   	</nav>			    
 				{
 					cloneElement(this.props.children, {
-					   items: this.state.items,
+					  items: this.state.items,
 					  flights: this.state.flights,
 					  twitter: this.state.twitter,
 					  news: this.state.news,
 					  loggedIn: this.state.loggedIn,
 					  loggedInUser: this.state.loggedInUser,
+					  hotels: this.state.hotels,
 					  searchFlights: this.searchFlights.bind(this),
-					  searchHotels: this.searchHotels.bind(this)
+					  searchHotels: this.searchHotels.bind(this),
 					  // logIn: this.logIn.bind(this)
 				  })
 				}
-					<footer> Eleuth Footer </footer>
+					<div id="footer">
+      <div className="container">
+        <div className="row centered">
+          <div className="col-md-8 col-md-offset-2">
+            <a href="https://github.com/jrizza88" img id="image"></a>
+            <a href="https://www.linkedin.com/in/jamartorres"><i class="ion-social-linkedin"></i></a>
+            <a href="https://twitter.com/JamarTorres"><i class="ion-social-twitter"></i></a>
+            <a href="https://instagram.com/JamarTorres"><i class="ion-social-instagram"></i></a>
+          </div>{/*col-md-8*/}
+        </div>
+      </div>{/*}container*/}
+    </div>{/*#footer*/}
 			</div>
 		</div>
 		);
@@ -170,4 +163,20 @@ class Application extends Component {
 }
 
 export default Application;
+
+
+
+// <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+// 			<script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
+
+// 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+// 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+
+// 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+// 			<link rel="icon" type="eleuth.png" src="styling/jumpingFrog.png" sizes="32x32" />
+
+// 			<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"/>
 

@@ -1,15 +1,11 @@
-body {
-
+/*body {
   margin-top:60px ;
-
-}
+}*/
 
 .user-form-container {
-
   max-width: 320px;
   padding: 0px;
   margin: 0 auto;
-
 }
 
 .tab-pane {
