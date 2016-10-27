@@ -127,7 +127,7 @@ class Application extends Component {
 			<nav className="navbar navbar-default">
 		<div className="container-fluid">
 	    	<div className="navbar-header">
-	      		<div><a className="navbar-brand" img id="image" src="eleuth.png" alt="logo" href="#search"> <img id="image" src="eleuth.png" alt="logo"/></a></div>
+	      		<div><a className="navbar-brand" img id="image" src="eleuth.png" alt="logo" href="#search"> <img className='logo' id="image" src="eleuth.png" alt="logo"/></a></div>
 	    	</div>
 	   </div>
   	</nav>			    
