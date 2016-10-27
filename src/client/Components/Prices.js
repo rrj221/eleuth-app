@@ -7,7 +7,7 @@ const Wrapper = styled.h5`
     width: 300px;
     height: 300px;
     overflow: auto;
-    color: white;
+    color: black;
 `;
 
 export default class Prices extends Component {
@@ -15,7 +15,7 @@ export default class Prices extends Component {
   	const { prices } = this.props;
   	console.log(prices);
     return (
-    <Wrapper>
+    <div>
     Options
       <div className="col-md-12">
 		<ul className='list-group-item'>
@@ -31,7 +31,7 @@ export default class Prices extends Component {
 		  }
 		</ul>
       </div>
-       </Wrapper>
+       </div>
     )
   }
 }

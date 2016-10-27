@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
 import styled from 'styled-components';
+import "./Results/Results.css";
+
 
 const Wrapper = styled.h5`
   font-size: 12px;
@@ -12,7 +14,7 @@ const Wrapper = styled.h5`
 export default class Price extends Component {
   render() {
     return (
-    <Wrapper>
+    <div>
       <div id='IndexPage'>
       	<div>
       		Agent Name: {this.props.agentName}
@@ -24,7 +26,7 @@ export default class Price extends Component {
         <a href={this.props.link}>Link</a>
         <br/>
       </div>
-    </Wrapper>
+    </div>
     )
   }
 }

@@ -28,6 +28,10 @@ body {
   font-family: 'Philosopher', sans-serif;
 }
 
+.pull-right{
+  overflow: auto;
+}
+
 /*.fMBSAo {
     padding: 1px;
     font-size: 14px;

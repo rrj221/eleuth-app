@@ -4,6 +4,7 @@ import Inbound from './Inbound';
 import Prices from './Prices';
 import price from './Price';
 
+import "./Results/Results.css";
 
  import styled from 'styled-components';
 
@@ -34,7 +35,7 @@ export default class Flight extends Component {
   
             <div className="container-fluid">
               <div className="row">
-                <div className="col-md-6" id="outbound">
+                <div className="col-md-4" id="outbound2">
               		<Outbound 
           	    		originStation={this.props.outboundInfo.originStation}
           				Destinationstation={this.props.outboundInfo.destinationStation}
@@ -47,7 +48,7 @@ export default class Flight extends Component {
               		/>
                 </div>
 
-                <div className="col-md-6" id="inbound">
+                <div className="col-md-4" id="inbound2">
                       <Inbound
           	        	originStation={this.props.inboundInfo.originStation}
           				destinationstation={this.props.inboundInfo.destinationStation}
