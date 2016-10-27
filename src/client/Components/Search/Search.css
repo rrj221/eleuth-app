@@ -25,7 +25,7 @@
 	position: relative;
 }
 
-.SearchPage {
+.searchPage {
   padding-top: 20px;
   font-family: 'Philosopher', sans-serif;
   height: 100vh;
@@ -34,9 +34,6 @@
   background-image: url("https://wallpaperscraft.com/image/serenity_tulips_fence_airplane_clouds_32569_2560x1440.jpg");
   background-repeat: no-repeat; 
   background-size: 100%;
-/*    flex: 1;
-    width: null;
-    height: null*/
 }
 
 .div.container {
@@ -64,16 +61,6 @@ body {
 	font-family: 'Philosopher', sans-serif;
 	font-size: 18px;
 }
-
-/*#flightsearchBody {
-background-image: url("https://s-media-cache-ak0.pinimg.com/564x/dc/12/6d/dc126da7b3f3ad76f158131e66ea3f60.jpg");
-  background-repeat: no-repeat; 
-  background-size: 100%;
-  height: 100vh;
-  width: 100vw;
-  font-family: 'Philosopher', sans-serif;
-  font-size: 18px;
-}*/
 
 .flights {
 	margin-bottom: 10px;
@@ -115,17 +102,6 @@ h2 {
  /*   background-color: #EFE8D8;*/
     }
 
-/*footer .flights {
-	background-color: black;
-	color: white;
-	padding: 10px;
-	position: absolute;
-    bottom: 0px;
-    width: 100%;
-    margin-bottom: 0px;
-    margin-left: -198px;
-
-}*/
 
 .dropdown-menu {
 	min-width: 135px;
@@ -133,7 +109,7 @@ h2 {
 
 @media only screen and (max-width: 1200px) {
     body {
-        background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/10/palm_tree_widescreen_wallpaper.jpg");
+        background-image: url("https://wallpaperscraft.com/image/serenity_tulips_fence_airplane_clouds_32569_2560x1440.jpg");
         background-repeat: no-repeat;	
 		background-size: 100%;
       height: 100vh;
@@ -149,6 +125,3 @@ h2 {
 	padding: 10px 10px 10px 10px;
 	margin-top: -25px;
 }
-/*body {
-	background-image: url("http://s1.favim.com/orig/140510/cute-fade-header-hipster-Favim.com-1744611.jpg")
-}*/

@@ -1,8 +1,8 @@
-html {
+/*html {
   height: 100%;
   width: 100%;
   
-}
+}*/
 
 h1{
   font-size: 48px;
@@ -13,10 +13,10 @@ h1{
   background-color: #EFE8D8;
 }
 
-body{
+/*body{
   background-color: #ece9e9;
   background-size: 100%;
-}
+}*/
 
 .btn-outline {
     background-color: transparent;
@@ -72,9 +72,10 @@ width: auto;
 height: 53px;
 }
 
-.welcome{
+#welcome{
   font-size: 20px;
-  font: white;
+  color: white;
+  background-color: transparent;
 }
 
 div.container-fluid{
@@ -141,8 +142,12 @@ span{
 
 .outbound .inbound .prices{
 border: 1px solid #ddd;
+  overflow: auto;
 }
 
+.price .prices{
+  font: black;
+}
 .btn-default {
   margin-bottom: 10px;
 }
@@ -157,19 +162,10 @@ a {
     background-color: #EFE8D8;
     }
 
-.footer {
-   /* position: absolute;*/
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #EFE8D8;
-    margin-bottom: 0px;
-    margin-left: -198px;
-/*    width: auto;*/
-}
 
 ul {
   list-style-type: none;
+  color: black;
 }
 
 .footerBox {

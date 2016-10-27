@@ -17,9 +17,9 @@ export default class Prices extends Component {
   	const { prices } = this.props;
   	console.log(prices);
     return (
-    <div>
+    <div className="options">
     Options
-      <div className="col-md-12">
+  <div className="col-md-12">
 		<ul className='list-group-item'>
 		  {
 			prices.map((agent) =>

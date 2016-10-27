@@ -28,7 +28,7 @@ class IndexPage extends Component {
         <div className="rowIndex">
             <br/>
             <ul>
-                <h1>Eleuth Travel</h1>
+                <div id="welcome"><h1>Eleuth Travel</h1></div>
                 <a className="btn btn-primary btn-outline btn-lg" href="#search">Flights</a>
                 <a className="btn btn-primary btn-outline btn-lg" href="#hotelSearch">Accomodations</a>
             </ul>
