@@ -1,15 +1,40 @@
 import React, { Component } from 'react';
 // import TodoItemList from '../Components/ToDoStuff/TodoItemList';
 
+import styled from 'styled-components';
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? 'palevioletred' : 'white'};
+  color: ${props => props.primary ? 'white' : '#dfdff6'};
+  border: 2px solid #dfdff6;
+  border-radius: 3px;
+  margin: 4em;
+`;
+
+const Wrapper = styled.h1`
+color: white;
+`;
+
 class IndexPage extends Component {
 
 	render() {
 		// const { items, toggleCompleted } = this.props;
 
 		return (
-			<div>
+			<div className="indexPageBackground">
 
-			</div>
+<div className="container">
+        <div className="rowIndex">
+            <br/>
+            <ul>
+                <h1>Eleuth Travel</h1>
+                <a className="btn btn-primary btn-outline btn-lg" href="#search">Flights</a>
+                <a className="btn btn-primary btn-outline btn-lg" href="#hotelSearch">Accomodations</a>
+            </ul>
+        </div>
+    </div>
+</div>
 			
 		);
 
@@ -18,8 +43,15 @@ class IndexPage extends Component {
 
 export default IndexPage;
 
-				// <h1>Index Page</h1>
-				// <TodoItemList
-				//   items={items} // pass down ALL items
-				//   toggleCompleted={toggleCompleted} // pass Application's toggleCompleted as-is!
-			 //  />
+// 				const Button = styled.button`
+//   /* Adapt the colors based on primary prop */
+//   background: ${props => props.primary ? 'palevioletred' : 'white'};
+//   color: ${props => props.primary ? 'white' : '#dfdff6'};
+
+//   font-size: 1em;
+//   margin: 4em;
+//   padding: 2em 7em;
+//   border: 2px solid #dfdff6;
+//   border-radius: 3px;
+//   positon: absolute;
+// `;

@@ -4,6 +4,11 @@ html {
   
 }
 
+h1{
+  font-size: 48px;
+  font: white;
+}
+
 #universalPage{
   background-color: #EFE8D8;
 }
@@ -13,9 +18,36 @@ body{
   background-size: 100%;
 }
 
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+    margin: 10px;
+}
+
+
+.btn-primary.btn-outline:hover,
+.btn-info.btn-outline:hover {
+    color: #fff;
+}
 
 .navbar-header {
   text-align: center;
+}
+
+.indexPageBackground {
+  padding-top: 20px;
+  font-family: 'Philosopher', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  font-size: 18px;
+  background-image: url("http://i.stack.imgur.com/pRumE.png");
+  background-repeat: no-repeat; 
+  background-size: 100%;
 }
 
 .navbar {
@@ -40,8 +72,21 @@ width: auto;
 height: 53px;
 }
 
+.welcome{
+  font-size: 20px;
+  font: white;
+}
+
 div.container-fluid{
 
+}
+
+.rowIndex{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
 }
 
 .col-lg-6 {
@@ -84,6 +129,10 @@ p {
   font-weight: bolder;
   font-size: 30px;
 
+}
+
+span{
+  font: black;
 }
 
 .nav-tabs{
