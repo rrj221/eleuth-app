@@ -15,7 +15,7 @@ export default class HotelDetails extends Component {
     const { details } = this.props;
 
     return (
-      <Wrapper>
+      <div>
         <div className="col-md-12">
           <ul className='list-group-item'>
             {
@@ -35,7 +35,7 @@ export default class HotelDetails extends Component {
           
 
 
-      </Wrapper>
+      </div>
     )
   }
 }

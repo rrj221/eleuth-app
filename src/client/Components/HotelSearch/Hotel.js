@@ -30,7 +30,7 @@ export default class Hotel extends Component {
           <div className="fakecontainer">
             <div className="row">
              <Title>This is a single hotel</Title>
-                <div className="col-md-4" id="outbound">
+                <div className="col-md-6" id="outbound">
                  <BasicHotelInfo
                    name={this.props.basicInfo.name}
                    address={this.props.basicInfo.address}
@@ -40,7 +40,7 @@ export default class Hotel extends Component {
                  />
                 </div>
 
-                <div className="col-md-4" id="inbound">
+                <div className="col-md-6" id="inbound">
                       <HotelDetails
                         details={this.props.details}
                       />

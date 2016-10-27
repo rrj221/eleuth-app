@@ -90,6 +90,10 @@ p {
   color: white;
 }
 
+.outbound{
+border: 1px solid #ddd;
+}
+
 .btn-default {
   margin-bottom: 10px;
 }

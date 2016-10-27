@@ -148,11 +148,11 @@ class Application extends Component {
 				  })
 				}
 
-			<footer className="footer">
+			{/*<footer className="footer">
 			      <div className="footerBox">
 			        		<p className="text-muted">Eleuth</p>
 			      </div>
-			</footer>
+			</footer>*/}
 		</div>
 	</div>
 		);

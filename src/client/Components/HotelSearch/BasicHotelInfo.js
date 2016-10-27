@@ -20,19 +20,21 @@ const Title = styled.h5`
 export default class HotelBasicInfo extends Component {
   render() {
     return (
-    <div>
-      <div className='outbound'>
+  <div>
+    <div className='outbound'>
+      
         <h5>Hotel Info</h5>
         <ul>
-          <Wrapper>
+          <div>
             <li>Name: {this.props.name}</li>
             <li>Address: {this.props.address}</li>
             <li>Arrival: {this.props.arrival}</li>
             <li>Stars: {this.props.stars}</li>
             <li>Popularity: {this.props.popularity}%</li>
             <li>Amenities: {this.props.amenities}</li>
-          </Wrapper>
+          </div>
         </ul>
+        
       </div>
     </div>
 
