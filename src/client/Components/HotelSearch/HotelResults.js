@@ -76,11 +76,11 @@ export default class HotelResults extends Component {
               {
             hotels.map((hotel) => 
                   <Wrapper>
-                    This is a single hotel
-                <Hotel
-                  basicInfo={hotel.hotelBasicInfo}
-                  details={hotel.details}         
-                />
+
+                    <Hotel
+                      basicInfo={hotel.hotelBasicInfo}
+                      details={hotel.details}         
+                    />
                   </Wrapper>
             )
           }

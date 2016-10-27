@@ -16,7 +16,7 @@ export default class Prices extends Component {
   	console.log(prices);
     return (
     <Wrapper>
-    Prices
+    Options
       <div className="col-md-12">
 		<ul className='list-group-item'>
 		  {
