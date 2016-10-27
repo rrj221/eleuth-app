@@ -39,6 +39,13 @@ h1{
   text-align: center;
 }
 
+#IndexPage img{
+  background-color: white;
+  border: 1px solid black;
+  vertical-align: middle;
+  width: 50%;
+}
+
 .indexPageBackground {
   padding-top: 20px;
   font-family: 'Philosopher', sans-serif;
