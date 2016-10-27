@@ -28,14 +28,14 @@ body {
   font-family: 'Philosopher', sans-serif;
 }
 
-.fMBSAo {
+/*.fMBSAo {
     padding: 1px;
     font-size: 14px;
     border: 20px;
     background-color: beige;
     border-color: black;
     columns: col-md-3 col-sm-6;
-}
+}*/
 
 .HotelResultsPage {
   padding-top: 20px;
@@ -47,3 +47,11 @@ body {
   background-repeat: no-repeat; 
   background-size: 100%;
 }
+
+.hotelResultsContainer {
+  border-width: 20px;
+  border-color: black;
+  height: 600px; /* Fix a height here */
+  overflow: auto;
+ }
+

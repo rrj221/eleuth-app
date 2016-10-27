@@ -26,7 +26,6 @@ export default class ResultsPage extends Component {
 	}
 
   render() {
-//       <div id='MasterPage'>
   	const flightsOld = this.state.flights;
     const { flights } = this.props;
     const tweetsOld = this.state.twitter;
@@ -37,7 +36,7 @@ export default class ResultsPage extends Component {
     return (
 <div className= "ResultsPage">
 
-  <div className="container containerSearch" id="main">
+  <div className="container" className="resultsContainer" id="main">
     <div className="row">
         <div className="col-md-3 col-sm-6">
          <div className="panel panel-default">
