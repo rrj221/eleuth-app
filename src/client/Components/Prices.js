@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Price from './Price';
 
 import styled from 'styled-components';
+import "./Results/Results.css";
+
 
 const Wrapper = styled.h5`
     width: 300px;
