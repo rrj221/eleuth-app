@@ -90,7 +90,7 @@ export default class ResultsPage extends Component {
                <div className="panel panel-default">
                  <div className="panel-heading"><a href="#" className="pull-right">View all</a> <h4>Trending</h4></div>
                    <div className="panel-body">
-                   <div className="clearfix">
+                    <div className="clearfix">
 {
                     tweets.map((tweet) => 
                       <div>
@@ -103,7 +103,7 @@ export default class ResultsPage extends Component {
                         </div>
                     )
                   }
-                   </div>
+                    </div>
                      <br/>
                  
                     </div>

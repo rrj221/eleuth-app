@@ -29,7 +29,7 @@ export default class Hotel extends Component {
   
           <div className="fakecontainer">
             <div className="row">
-             <Title>This is a single hotel</Title>
+             <Title></Title>
                 <div className="col-md-6" id="outbound">
                  <BasicHotelInfo
                    name={this.props.basicInfo.name}
